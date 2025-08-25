@@ -1,0 +1,152 @@
+// APPOINTMENT
+.appointment-box{
+	.container{
+		z-index: 2;
+	}
+	.appoint-bg{
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		bottom: 0;
+	}
+	.contact-bx{
+		border-radius: 20px;
+		padding: 50px;
+		box-shadow: 0 0 30px 0 rgba(0, 86, 106, 0.15);
+		max-width: 800px;
+		margin: auto;
+		background: #fff;
+		background-image: url(../images/background/bg6.jpg);
+		background-size: 100%;
+		
+		.input-group label{
+			color: #000;
+		}
+	}
+}
+.appoint-bx1{
+	.form-control{
+		background: transparent;
+		border-width: 0 0 2px 0px;
+		color: #fff;
+		font-size: 16px;
+		padding: 10px 0;
+		border-radius: 0;
+	}
+	.form-control::-moz-placeholder {
+		color: #fff;
+	}
+	.form-control:-moz-placeholder{
+		color: #fff;
+	}
+	.form-control:-ms-input-placeholder{
+		color: #fff;
+	}
+	.form-control::-webkit-input-placeholder{
+		color: #fff;
+	}
+	.input-bx{
+		position: relative;
+		z-index:1;
+		
+		&::after{
+			content: "";
+			width: 0;
+			height: 2px;
+			position: absolute;
+			background: #020d26;
+			bottom: 0;
+			right: 0;
+			transform-origin: right;
+			transition:all 0.3s;
+			z-index:4;
+		}
+	}
+	.focused .input-bx::after{
+		right: auto;
+		left:0;
+		width:100%;
+	}
+}
+.appoint-video{
+    border-radius: 8px 8px 60px 8px;
+    overflow: hidden;
+    margin-right: 30px;
+	height:100%;
+	
+	img{
+		height:100%;
+		object-fit:cover;
+		width: 100%;	
+	}
+}
+
+/* Appointment Form */
+.form-area-box .advance-input label {
+	font-size: $input-font-size;
+    font-weight: 400;
+    color: #606060;
+    position: absolute;
+    top: 10px;
+    left: $input-btn-padding-x;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+	z-index: 1;
+    pointer-events: none;
+}
+.form-area-box .form-group{
+	position:relative;
+}
+.form-area-box .form-group.focused label {
+    top: -22px;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bs-primary);
+    left: 0;
+}
+.form-area-box textarea.form-control {
+	height:150px;
+}
+.form-area-box .check-btn .btn {
+    color: #555;
+    background-color: #eee;
+}
+.appoint-img img{
+	height: 850px;
+    width: 100%;
+    object-fit: contain;
+    margin-top: -50px;
+}
+.form-area-box .check-btn .btn input{
+	display: none;
+}
+.form-area-box .check-btn .btn.active{
+	background-color: var(--bs-primary);
+	color: #fff;
+}
+.get-in-touch.form-area-box .form-group.focused label{
+	background:transparent;
+}
+.form-area-box  .input-group-btn{
+	display: block;
+    width: 100%;
+}
+.form-area-box .custom-control-label{
+	font-weight:400;
+}
+@media only screen and (max-width: 1191px) {
+	.appoint-img img {
+		height: 700px;
+		margin-top: 0;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.appoint-img img {
+		height: auto;
+	}
+}

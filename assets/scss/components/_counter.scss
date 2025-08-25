@@ -1,0 +1,116 @@
+// COUNTERUP
+.counter{
+    position: relative;
+}
+.counter-style-1{
+	.counter{
+		font-size: 70px;
+		font-weight: 700;
+		line-height: 70px;
+		display: inline-block;
+	}
+	.counter-text{
+		font-size: 18px;
+		font-weight: 500;
+	}
+	&.text-black .counter-text{
+		color: #000;
+	}
+	.icon{
+		font-size: 45px;
+		margin-right: 10px;
+	}
+	span{
+		font-size:70px;
+		font-weight:700;
+		line-height: 70px;
+		display: inline-block;
+	}
+	@include media-breakpoint-down(xl){
+		.counter{
+			font-size: 45px;
+			line-height: 55px;
+		}
+		span{
+			font-size: 45px;
+			line-height: 55px;
+		}
+		.counter-text{
+			font-size: 14px;
+			line-height: 28px;
+		}
+	}
+	@include media-breakpoint-down(sm){
+		span, .counter{
+			font-size: 32px;
+			line-height: 40px;
+		}
+	}
+}
+.counter-style-2{
+	text-align:center;
+	z-index:1;
+	position:relative;
+	
+	.counter-bx{
+		margin-bottom: 10px;
+		
+		span{
+			font-size: 110px;
+			font-weight: 300;
+			line-height: 110px;
+			display: inline-block;
+			color: var(--bs-primary);
+		}
+	}
+	.counter-text{
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		text-transform: uppercase;
+	}
+	.bg-icon{
+		color: #000;
+		width: 100%;
+		text-align: center;
+		top: -40px;
+		bottom: auto;
+	}
+	@include media-breakpoint-down(lg){
+		.counter-bx{
+			margin-bottom: 5px;
+			
+			span{
+				font-size: 80px;
+				line-height: 80px;
+			}
+		}
+		.bg-icon{
+			font-size: 110px;
+			top: -10px;	
+		}
+	}
+}
+.text-white{
+	.counter-style-2 .counter-text,
+	.counter-style-2 .counter-bx span{
+		color:#fff;
+	}
+}
+.counter-style-3{
+    text-align: center;
+    padding: 30px 10px;
+    border-radius: 8px;
+	
+	.counter-text{
+		font-size: 14px;
+		color: #fff;
+	}
+	div span{
+		font-size: 50px;
+		color: #fff;
+		line-height: 60px;
+		margin-bottom: 5px;
+		display: inline-block;
+	}
+}

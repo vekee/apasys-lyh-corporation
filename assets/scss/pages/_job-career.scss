@@ -1,0 +1,33 @@
+// JOB CAREER
+.job-career-box{
+	padding: 30px;
+	background: #fff;
+	border-radius: 15px;
+	
+	p{
+		font-size: 16px;
+		margin-bottom: 10px;
+		line-height: 1.5;
+		
+		strong{
+			font-weight:500;
+			color: var(--bs-dark);
+		}
+	}
+	ul li{
+		font-size: 18px;
+		color: #666;
+		
+		@media only screen and (max-width: 591px) {
+			font-size: 16px;
+		}
+	}
+	.list-check li:before{
+		top: 8px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.job-career-box {
+		padding: 20px;
+	}
+}
