@@ -1,0 +1,154 @@
+.container-v1{
+	@media (min-width: 1380px) {		
+		max-width: 1320px;
+	}
+}
+
+.hero-slider1{
+	height: 850px;
+	background-color: #E2D3C4;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	display: block;
+    width: 100%;
+	
+	.swiper-slide{
+		background-color: #E2D3C4;
+	}
+	.parallax-text{
+		position: absolute;
+		left: -20px;
+		bottom: 0;
+		font-family: 'Kanit';
+		font-weight: 800;
+		font-size: 310px;
+		line-height: 220px;
+		color: rgba(255, 255, 255, 0.1);
+		z-index: -1;
+	}
+	.hero-img{
+		margin-right: 0;
+		min-width: 850px;
+		margin-left: -120px;
+		height: 850px;
+		
+		img{
+		    height: 100%;
+			width: auto;
+			max-width: max-content;
+		}
+	}
+	h1{
+	    font-size: 100px;
+		line-height: 1.15;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+	p{
+	    font-size: 24px;
+		font-weight: 300;
+	}
+	.btn-content{
+		margin-top: 50px;
+	}
+	.hero-content{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	@media only screen and (max-width: 1480px) {
+		height: 620px;
+
+		h1{
+		    font-size: 82px;
+		}
+		p {
+			font-size: 20px;
+		}
+		.btn-content{
+			margin-top: 30px;
+		}
+		.parallax-text{
+			font-size: 200px;
+			line-height: 150px;
+		}
+		.hero-img{
+			min-width: 600px;
+			height: 620px;
+		}
+	}
+	@media only screen and (max-width: 1191px) {
+		height: 520px;
+
+		h1{
+		    font-size: 72px;
+		}
+		p {
+			font-size: 18px;
+		}
+		.parallax-text{
+			font-size: 120px;
+			line-height: 100px;
+		}
+		.hero-img{
+			min-width: 500px;
+			height: 520px;
+		}
+	}
+	@media only screen and (max-width: 991px) {
+		height: 420px;
+
+		h1{
+		    font-size: 50px;
+		}
+		p {
+			font-size: 14px;
+		}
+		.parallax-text{
+			font-size: 100px;
+			line-height: 80px;
+		}
+		.hero-img{
+			min-width: 400px;
+			height: 420px;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		height: 360px;
+
+		h1{
+		    font-size: 38px;
+		}
+		.btn-content{
+			margin-top: 15px;
+		}
+		.parallax-text{
+			font-size: 80px;
+			line-height: 60px;
+			left: 10px;
+		}
+		.hero-img{
+			min-width: 350px;
+			height: 360px;
+		}
+	}
+	@media only screen and (max-width: 591px) {
+		.hero-img{
+			display: none;
+		}
+		.parallax-text{
+			font-size: 60px;
+			line-height: 50px;
+		}
+	}
+}
+
+.portfolio-swiper4{
+	margin-left: -350px;
+	margin-right: -350px;
+	
+	@media only screen and (max-width: 1191px) {
+		margin-left: -250px;
+		margin-right: -250px;
+	}
+}
