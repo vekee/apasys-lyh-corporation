@@ -1,0 +1,63 @@
+/* Box Max Width Css */
+.mw50 { max-width: 50px; } 
+.mw60 { max-width: 60px; } 
+.mw80 { max-width: 80px; } 
+.mw100 { max-width: 100px; } 
+.mw200 { max-width: 200px; } 
+.mw300 { max-width: 300px; } 
+.mw400 { max-width: 400px; } 
+.mw500 { max-width: 500px; } 
+.mw600 { max-width: 600px; } 
+.mw700 { max-width: 700px; } 
+.mw800 { max-width: 800px; } 
+.mw900 { max-width: 900px; } 
+.mw1000 { max-width: 1000px; }
+
+/* Background White Transperent */
+.tpbw1{ background-color:rgba(255,255,255,0.1) }
+.tpbw2{ background-color:rgba(255,255,255,0.2) }
+.tpbw3{ background-color:rgba(255,255,255,0.3) }
+.tpbw4{ background-color:rgba(255,255,255,0.4) }
+.tpbw5{ background-color:rgba(255,255,255,0.5) }
+.tpbw6{ background-color:rgba(255,255,255,0.6) }
+.tpbw7{ background-color:rgba(255,255,255,0.7) }
+.tpbw8{ background-color:rgba(255,255,255,0.8) }
+.tpbw9{ background-color:rgba(255,255,255,0.9) }
+
+/* Background Black Transperent */
+.bg-tpb1{ background-color:rgba(0,0,0,0.05) }
+.bg-tpb2{ background-color:rgba(0,0,0,0.2) }
+.bg-tpb3{ background-color:rgba(0,0,0,0.3) }
+.bg-tpb4{ background-color:rgba(0,0,0,0.4) }
+.bg-tpb5{ background-color:rgba(0,0,0,0.5) }
+.bg-tpb6{ background-color:rgba(0,0,0,0.6) }
+.bg-tpb7{ background-color:rgba(0,0,0,0.7) }
+.bg-tpb8{ background-color:rgba(0,0,0,0.8) }
+.bg-tpb9{ background-color:rgba(0,0,0,0.9) }
+
+
+.mfp-title{
+	display:none;
+}
+.mfp-gallery{
+	list-style:none;
+	margin-bottom: 0;
+}
+.link-inline{
+	margin-bottom:0;
+	padding:0;
+	list-style:none;
+	margin-left: -10px;
+	margin-right: -10px;
+	
+	li{
+		display: inline-block;
+		line-height: 1.5;	
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+.btn-long{
+	padding-left: 40px;
+	padding-right: 40px;
+}
