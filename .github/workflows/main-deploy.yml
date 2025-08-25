@@ -1,0 +1,137 @@
+name: Deploy spark-corp-site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: prd
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install html-minifier-terser clean-css-cli terser -g
+
+      - name: Minify HTML/CSS/JS
+        run: |
+          mkdir -p dist
+
+          # HTML
+          for file in $(find . -name '*.html'); do
+            out="dist/${file}"
+            mkdir -p "$(dirname "$out")"
+            html-minifier-terser --collapse-whitespace --remove-comments --minify-js true --minify-css true -o "$out" "$file"
+          done
+
+          # CSS
+          for file in $(find . -name '*.css'); do
+            out="dist/${file}"
+            mkdir -p "$(dirname "$out")"
+            cleancss -o "$out" "$file"
+          done
+
+          # JS
+          for file in $(find . -name '*.js'); do
+            out="dist/${file}"
+            mkdir -p "$(dirname "$out")"
+            terser "$file" -o "$out" -c -m
+          done
+
+          # その他のファイルを dist にコピー（除外付き）
+          rsync -av \
+            --exclude='*.html' \
+            --exclude='*.css' \
+            --exclude='*.js' \
+            --exclude='.git' \
+            --exclude='.github' \
+            ./ dist/
+
+
+      - name: Compress dist
+        run: |
+          tar -cvf corp-site.tar -C dist .
+
+      - name: Prepare Remote Directory, Backup, and Cleanup Old Backups
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            TARGET_DIR="/var/www/spark/corp-site"
+            TIMESTAMP=$(date '+%Y%m%d%H%M%S')
+            BACKUP_NAME="backup_corp_site_${TIMESTAMP}.tar.gz"
+            BACKUP_DIR="/var/www/spark/backups/corp-site"
+
+            # フォルダ作成（初回対応）
+            sudo mkdir -p "$TARGET_DIR"
+            sudo mkdir -p "$BACKUP_DIR"
+            
+            # 対象ディレクトリの権限を先に与える（デプロイ前に実行）
+            sudo chown -R ${{ secrets.USERNAME }} /var/www/spark
+
+            # バックアップ処理（中身があればアーカイブ）
+            if [ "$(ls -A $TARGET_DIR)" ]; then
+              sudo tar -czf "$BACKUP_DIR/$BACKUP_NAME" -C "$TARGET_DIR" .
+              echo "Backup created: $BACKUP_DIR/$BACKUP_NAME"
+            else
+              echo "No content to backup."
+            fi
+
+            # 30日以上前のバックアップを削除
+            sudo find "$BACKUP_DIR" -type f -name "backup_corp_site_*.tar.gz" -mtime +30 -exec rm -f {} \; || true
+
+      - name: Upload compressed dist.tar
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          source: corp-site.tar
+          target: /var/www/spark/corp-site/
+
+      - name: Extract on server and finalize permissions
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            cd /var/www/spark/corp-site
+            sudo tar -xvf corp-site.tar
+            sudo rm corp-site.tar
+
+            # 権限設定（必要に応じて調整）
+            sudo chown -R www-data:www-data /var/www/spark/corp-site
+            sudo find /var/www/spark/corp-site -type d -exec chmod 775 {} \;
+            sudo find /var/www/spark/corp-site -type f -exec chmod 664 {} \;
+
+      - name: Reload nginx
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: |
+            sudo nginx -t
+            if systemctl is-active --quiet nginx; then
+              sudo systemctl reload nginx
+            else
+              echo "Nginx is not running. Starting Nginx..."
+              sudo systemctl start nginx
+            fi
+
