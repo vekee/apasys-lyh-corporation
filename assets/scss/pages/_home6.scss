@@ -1,0 +1,346 @@
+.hero-slider6{
+	background-color: #222222;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	display: block;
+    width: 100%;
+	
+	.autoplay-progress{
+		position: absolute;
+		left: 40px;
+		bottom: 50px;
+		z-index: 10;
+		width: 45px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 400;
+		color: #fff;
+		font-size: 12px;
+		
+		&::after{
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			border: 3px solid rgba(255, 255, 255, .2);
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+		}
+		svg {
+			--progress: 0;
+			position: absolute;
+			left: 0;
+			top: 0px;
+			z-index: 10;
+			width: 100%;
+			height: 100%;
+			stroke-width: 3px;
+			stroke: #fff;
+			fill: none;
+			stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+			stroke-dasharray: 125.6;
+			transform: rotate(-90deg);
+		}
+    }
+	.number-pagination{
+		position: absolute;
+		right: 40px;
+		bottom: 50px;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		color: #fff;
+		font-size: 18px;
+		
+		.slide-separate{
+			width: 40px;
+			min-width: 40px;
+			height: 2px;
+			background-color: #fff;
+			opacity: 0.4;
+		}
+		.slide-items{
+			opacity: 0.4;
+		}
+	}
+	.hero-content{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		padding: 50px 30px 50px;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.title{
+		color: #fff;
+		font-size: 200px;
+		font-weight: 400;
+		margin-bottom: 0;
+		line-height: 1;
+	}
+	.sub-title{
+		color: #fff;
+		font-size: 35px;
+		font-weight: 400;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	.hero-img{
+		height: 910px;
+		position: relative;
+		background-position: center;
+		background-size: cover;
+		width: 100%;
+		
+		&::after{
+			content: "";
+			background-color: #1D1D1D;
+			opacity: 0.25;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.content-top{
+		width: 100px;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+	@media (max-width: 1680px){
+		.title{
+			font-size: 180px;
+		}
+	}
+	@media (max-width: 1480px){
+		.title{
+			font-size: 150px;
+		}
+		.hero-img{
+			height: 800px;
+		}
+	}
+	@media (max-width: 1191px){
+		.hero-content {
+			padding: 50px 100px 50px;
+		}
+		.title{
+			font-size: 100px;
+		}
+		.sub-title{
+			font-size: 24px;
+		}
+		.hero-img{
+			height: 620px;
+		}
+	}
+	@media (max-width: 991px){
+		.title{
+			font-size: 72px;
+		}
+		.content-top{
+			width: 80px;
+		}
+		.number-pagination {
+			right: 20px;
+			bottom: 20px;
+			font-size: 15px;
+		}
+		.autoplay-progress{
+			left: 20px;
+			bottom: 20px;
+		}
+		.hero-img{
+			height: 520px;
+		}
+		.hero-content{
+			padding: 30px 100px 30px;
+		}
+	}
+	@media (max-width: 767px){
+		.hero-content{
+			padding: 30px 15px 80px;
+		}
+		.autoplay-progress{
+			width: 35px;
+			height: 35px;
+			font-size: 10px;
+		}
+	}
+	@media (max-width: 591px){
+		.title{
+			font-size: 48px;
+		}
+		.sub-title{
+			font-size: 18px;
+		}
+		.hero-img{
+			height: 480px;
+		}
+	}
+}
+.gsap-scroll-slider{
+	flex-wrap: nowrap;
+}
+.gspa-blog-scroll{
+	padding-top: 180px;
+	padding-bottom: 100px;
+	
+	.heading-bx {
+		margin-bottom: 50px;
+	}
+	.title-head{
+		font-size: 35px;
+		color: #000;
+		font-weight: 400;
+	}
+	
+	@media (max-width: 1680px){
+		padding-top: 120px;
+		padding-bottom: 80px;
+	}
+	@media (max-width: 1680px){
+		padding-top: 80px;
+		padding-bottom: 50px;
+	}
+	@media (max-width: 991px){
+		padding-top: 50px;
+		padding-bottom: 30px;
+		
+		.title-head{
+			font-size: 28px;
+		}
+		.heading-bx{
+			margin-bottom: 40px;
+		}
+	}
+}
+.gsap-progress-indicator{
+	font-size: 110px;
+	color: var(--bs-heading-color);
+	font-family: var(--bs-headings-font-family);
+	line-height: 1;
+	
+	@media (max-width: 991px){
+		font-size: 72px;	
+	}
+}
+.beauty-about-section{
+	.about-title{
+	    font-size: 70px;
+		font-weight: 400;
+		margin-bottom: 12px;
+		line-height: 1.2;
+	}
+	p{
+		font-size: 20px;
+		color: #333333;
+		margin-right: -5px;
+	}
+	.beauty-about-img{
+		position: relative;
+		margin: 30px 45px 20px 65px;
+		
+		&::before,
+		&::after{
+			content: "";
+			position: absolute;
+		}
+		&::before{
+			background-image: url(../images/skincare/about/about-star.svg);
+			height: 75px;
+			width: 75px;
+			top: -30px;
+			left: -30px;
+			animation: spin 10s linear infinite;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		&::after{
+			height: 35px;
+			width: 35px;
+			bottom: -10px;
+			right: -8px;
+			background-color: var(--bs-primary);
+			border-radius: 10px;
+		}
+		img{
+			mask-image: url(../images/skincare/about/about-mask.png);
+			-webkit-mask-image: url(../images/skincare/about/about-mask.png);
+			-webkit-mask-position: top center;
+			mask-position: top center;
+			mask-size: 100%;
+			border-radius: 15px;
+			width: 100%;
+		}
+	}
+	.rounded-ring{
+		background-image: url(../images/skincare/about/rounded-ring.svg);
+		position: absolute;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		top: -30px;
+		right: -45px;
+		bottom: -30px;
+		left: -65px;
+	}
+	.subscribe-form2{
+		margin-top: 60px;
+	}
+	@media only screen and (max-width: 1191px){
+		.about-title{
+			font-size: 48px;
+		}
+		p{
+			font-size: 16px;
+		}
+		.subscribe-form2{
+			margin-top: 30px;
+		}
+		.beauty-about-img::after {
+			height: 25px;
+			width: 25px;
+			border-radius: 8px;
+		}
+		.beauty-about-img::before {
+			height: 55px;
+			width: 55px;
+			top: -25px;
+			left: -25px;
+		}
+	}
+	@media only screen and (max-width: 591px){
+		.about-title{
+			font-size: 36px;
+			margin-bottom: 8px;
+		}
+		.beauty-about-img {
+			margin: 30px 25px 20px 25px;
+		}
+		.rounded-ring{
+			right: -30px;
+			left: -30px;
+		}
+	}
+}
+@keyframes spin{
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
