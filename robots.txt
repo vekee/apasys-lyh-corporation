@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://takedashoji.com/sitemap.xml
+Sitemap: https://spark-hair.co.jp/sitemap.xml
