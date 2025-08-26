@@ -1,0 +1,38 @@
+.client-logo{
+	text-align: center;
+	
+	img{
+		height: 90px;
+		width: auto !important;
+		margin: auto;
+		transition:all 0.5s;
+		-moz-transition:all 0.5s;
+		-webkit-transition:all 0.5s;
+		-ms-transition:all 0.5s;
+		-o-transition:all 0.5s;
+		object-fit: contain;
+		opacity:0.7;
+	}
+	&:hover img{
+		opacity:1;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.client-logo img{
+		height: 70px;
+	}
+}
+
+.clients-section-one{
+	position: relative;
+	
+	.bg-pattern-one{
+		position: absolute;
+		right: 5%;
+		bottom: 15%;
+		
+		@media only screen and (max-width: 576px) {
+			width: 85px;
+		}
+	}
+}

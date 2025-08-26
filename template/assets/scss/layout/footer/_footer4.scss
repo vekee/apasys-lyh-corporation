@@ -1,0 +1,75 @@
+.footer-style4{
+	.footer-top {
+		padding: 130px 0 100px;
+		
+		@media only screen and (max-width: 1480px) {
+			padding: 100px 0 70px;
+		}
+		@media only screen and (max-width: 991px) {
+			padding: 70px 0 40px;
+		}
+		@media only screen and (max-width: 591px) {
+			padding: 50px 0 20px;
+		}
+	}
+	.widget{
+		margin-bottom: 50px;
+	}
+	.widget:last-child{
+		margin-bottom: 50px;
+	}
+	.footer-title {
+		margin-bottom: 32px;
+		font-size: 24px;
+	}
+	.getintouch {
+		color: var(--bs-gray);
+		
+		&:hover{
+			color: #FFF;
+		}
+	}
+	.contact-info ul li i{
+		color: #ABDE98;
+	}
+	@media only screen and (min-width: 991px) {
+		.git-right:after{
+			right: -40px;
+		}
+	}
+	@media only screen and (min-width: 1480px) {
+		.git-right:after {
+			right: -120px;
+		}
+	}
+	&.footer-dark{
+		background-color: var(--bs-dark);	
+		
+		.getintouch{
+			color: #fff;
+			
+			span{
+				color: #ABDE98;
+				
+				&::after {
+					background-color: #ABDE98;
+				}
+			}
+		}
+		h1, h2, h3, h4, h5, h6{
+			color: #fff;
+			
+			a{
+				color: #fff;
+			}
+		}
+	}
+	@media (max-width: 591px){
+		.widget{
+			margin-bottom: 35px;
+		}
+		.widget:last-child{
+			margin-bottom: 35px;
+		}
+	}
+}

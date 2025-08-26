@@ -1,0 +1,72 @@
+/*
+	Website Name	::   Genda | Beauty and Skincare Bootstrap 5 Template 
+	Author			::   LayoutDrop
+	Version			::   1.0.0
+	
+	========== Table Of Content ==========
+	
+	1. Fonts & Icons
+		1.1 Google Fonts
+		1.2 Lucide Icons
+
+	2. Design System
+		2.1 _themes.scss
+		2.2 _typography.scss
+	
+	3. Base Styles
+		3.1 _reboot.scss
+		3.2 _basic.scss
+
+	4. Layout
+		4.1 Footer
+		4.2 Header
+		4.3 _page-banner.scss
+		
+	5. components
+		5.1 _accordion.scss
+		5.2 _alert.scss
+		5.3 _badge.scss
+		5.4 _button.scss
+		5.5 _card.scss
+		5.8 UI Components (_components.scss)
+
+	6. Pages
+		6.1 _home1.scss
+		6.2 _home2.scss
+		6.3 _home3.scss
+		6.4 _home4.scss
+		6.5 Page-specific overrides (_page.scss)
+
+	7. Posts
+		7.1 Blog List
+		7.2 Single Post
+		7.3 Article Typography (_post.scss)
+
+
+	========== ========== ==========
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* lucide Icons  */
+@import "./../libs/lucide/lucide.css";
+
+@import "./variables";
+@import "./../libs/bootstrap/scss/bootstrap.scss";
+@import "./design-system/design-system";
+@import "./basic/basic";
+@import "./layout";
+@import "./helpers";
+@import "./components";
+@import "./post";
+@import "./page";
