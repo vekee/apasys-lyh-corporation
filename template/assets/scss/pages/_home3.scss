@@ -1,0 +1,310 @@
+.hero-slider3{
+	background-color: #222222;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	display: block;
+    width: 100%;
+	height: 950px;
+	
+	&::after{
+		content: "";
+		background-color: #222222;
+		opacity: 0.3;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	video{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.title{
+		font-size: 130px;
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: 0;
+	}
+	.sub-title{
+		font-size: 40px;
+		color: #fff;
+		line-height: 1.2;
+		font-weight: 400;
+		margin-bottom: 30px;
+	}
+	.hero-content{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		padding: 50px 50px 80px 80px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		
+		.start-content{
+			width: 65%;
+		}
+		.end-content{
+			width: 35%;
+			text-align: right;
+		}
+	}
+	@media (max-width: 1680px){
+		.title{
+			font-size: 100px;
+		}
+		.sub-title{
+			font-size: 32px;
+			margin-bottom: 25px;
+		}
+	}
+	@media (max-width: 1380px){
+		height: 750px;
+		
+		.hero-content{
+			padding: 30px 35px 50px 50px;
+		}
+		.title{
+			font-size: 85px;
+		}
+		.sub-title{
+			font-size: 28px;
+		}
+	}
+	@media (max-width: 1191px){
+		height: 650px;
+		
+		.hero-content{
+			padding: 30px 35px 35px 35px;
+		}
+		.title{
+			font-size: 65px;
+		}
+		.sub-title{
+			font-size: 24px;
+			margin-bottom: 15px;
+		}
+	}
+	@media (max-width: 991px){
+		height: 500px;
+		
+		.hero-content{
+			padding: 20px;
+		}
+		.title{
+			font-size: 52px;
+		}
+		.sub-title{
+			font-size: 20px;
+		}
+	}
+	@media (max-width: 767px){
+		height: 500px;
+		
+		.hero-content{
+			padding: 20px;
+		}
+		.title{
+			font-size: 42px;
+		}
+		.sub-title{
+			font-size: 18px;
+		}
+	}
+	@media (max-width: 591px){
+		.hero-content{
+			flex-direction: column;
+			
+			.start-content{
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			.end-content{
+				width: 100%;
+				text-align: left;
+			}
+		}
+		.title{
+			font-size: 36px;
+		}
+	}
+}
+.section-space-skincare{
+	padding-top: 130px;
+	padding-bottom: 100px;
+	
+	@media (max-width: 1191px){
+		padding-top: 100px;
+		padding-bottom: 70px;
+	}
+	@media (max-width: 991px){
+		padding-top: 70px;
+		padding-bottom: 40px;
+	}
+	@media (max-width: 591px){
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+}
+.heading-text-img{
+	font-size: 80px;
+    text-align: center;
+    font-weight: 600 !important;
+    line-height: 1.6;
+	
+	img{
+		height: 90px;
+		object-fit: cover;
+		border-radius: 100px;
+		width: 90px;
+		margin-top: -12px;
+	}
+	.img-long{
+		width: 180px;
+	}
+	.img-small{
+		width: 145px;
+	}
+	@media (max-width: 1191px){
+		font-size: 52px;
+		
+		img{
+			height: 60px;
+			width: 60px;
+		}
+		.img-long{
+			width: 120px;
+		}
+		.img-small{
+			width: 100px;
+		}
+	}
+	@media (max-width: 991px){
+		font-size: 45px;
+		
+		img{
+			height: 45px;
+			width: 45px;
+		}
+		.img-long{
+			width: 90px;
+		}
+		.img-small{
+			width: 70px;
+		}
+	}
+	@media (max-width: 591px){
+		font-size: 32px;
+		
+		img{
+			height: 35px;
+			width: 35px;
+			margin-top: -5px;
+		}
+		.img-long{
+			width: 70px;
+		}
+		.img-small{
+			width: 45px;
+		}
+	}
+}
+.section-heading-text{
+	padding-top: 215px;
+    padding-bottom: 215px;
+	
+	@media (max-width: 1480px){
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+	@media (max-width: 1191px){
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	@media (max-width: 991px){
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	@media (max-width: 591px){
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+.section-product-ads{
+	.cover-img{
+		height: 800px;
+		width: 100%;
+		object-fit: cover;
+	}
+	.product-center{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 4px;
+		width: 300px;
+	}
+	.content-wrap{
+		padding: 30px;
+	}
+	@media (max-width: 1280px){
+		.product-center{
+			width: 240px;
+		}
+		.heading-bx.style4 .title-head {
+			font-size: 48px;
+		}
+		.cover-img {
+			height: 650px;
+		}
+	}
+	@media (max-width: 1191px){
+		.product-center{
+			width: 200px;
+		}
+		.heading-bx.style4 .title-head {
+			font-size: 36px;
+		}
+		.cover-img {
+			height: 500px;
+		}
+	}
+	@media (max-width: 991px){
+		.cover-img{
+			height: auto;
+		}
+		.content-wrap{
+			position: relative;
+			display: flex;
+			align-items: center;
+			gap: 30px;
+		}
+		.product-center{
+			width: 150px;
+			min-width: 150px;
+			position: unset;
+			transform: unset;
+		}
+	}
+	@media (max-width: 767px){
+	    .heading-bx.style4 {
+			margin-bottom: 30px;
+			
+			.title-head{
+				font-size: 32px;
+			}
+		}
+	}
+	@media (max-width: 591px){
+		.content-wrap {
+			flex-direction: column;
+			align-items: self-start;
+		}
+	}
+}
