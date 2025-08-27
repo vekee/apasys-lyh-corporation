@@ -167,5 +167,94 @@ Theme Version:	1.0.0
 	jQuery(window).on("load", function (e) {
 		FormFunction.afterLoadThePage();
 	});
-	
+
+
+
+	/*------------------------------------------
+    = CONTACT FORM SUBMISSION
+	-------------------------------------------*/  
+	// contact page contact form
+	if ($("#contact-form-s2").length) {
+		// 直接使用日语消息（移除多语言检测）
+		const messages = {
+			name: "お名前を入力してください",
+			email: "メールアドレスを请输入してください",
+			phone: "電話番号を入力してください",
+			note: "お問い合わせ内容を入力してください"
+		};
+
+		$("#contact-form-s2").validate({
+			rules: {
+				company_name: {
+					required: false
+				},
+				name: {
+					required: true,
+					minlength: 2
+				},
+				email: "required",
+				
+				phone: {
+					required: true
+				},
+				
+				note: {
+					required: true
+				},
+
+			},
+
+			messages: messages,
+
+			submitHandler: function (form) {
+				$("#loader").css("display", "inline-block");
+
+				var mailContent = "会社名: " + $('#company_name').val() + "\n";
+				mailContent += "お名前: " + $('#name').val() + "\n";
+				mailContent += "メールアドレス: " + $('#email').val() + "\n";
+				mailContent += "電話番号: " + $('#phone').val() + "\n";
+				mailContent += "メッセージ: " + $('#note').val() + "\n";
+		
+				var toList = ["shouyi.li@apasys.co.jp"];
+				var data = { 
+					title: "【重要】【全社全般】からの問い合わせを早急にご確認ください。",
+					content: mailContent,
+					toList: toList,
+					formsendbox_id: "b309590d3bb80e140873d729be7c8d6d",
+					formsendbox_key: "2b2731af96cc3d862395993a7ba1188d"
+				};
+
+				$.ajax({
+					type: 'POST',
+					datatype: 'text',
+					url: 'https://formsendbox.com/sendSimpleMail',
+					data: JSON.stringify(data),
+					contentType: 'application/json',
+					beforeSend: function (xhr) {
+						xhr.withCredentials = true;
+					},
+					crossDomain: true,
+					success: function () {
+						$( "#loader").hide();
+						$( "#success").slideDown( "slow" );
+						setTimeout(function() {
+						$( "#success").slideUp( "slow" );
+						}, 5000);
+						form.reset();
+					},
+					error: function() {
+						$( "#loader").hide();
+						$( "#error").slideDown( "slow" );
+						setTimeout(function() {
+						$( "#error").slideUp( "slow" );
+						}, 5000);
+					}
+				});
+				return false; 
+			}
+
+		});
+	}
+
+
 })(jQuery);	
