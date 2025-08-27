@@ -62,6 +62,75 @@
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<!-- end::Template Stylesheet -->
 
+	<!-- 会社サイトの正しいドメインに変更してください。画像は実ファイルURLに -->
+	<!-- 下北沢店 -->
+	<script type="application/ld+json">
+	{
+	"@context": "https://schema.org",
+	"@type": "BeautySalon",
+	"@id": "https://example.com/salons/shimokitazawa#store",
+	"name": "まつげパーマ専門店 下北沢店",
+	"image": "https://example.com/assets/images/awards/pic1.jpg",
+	"url": "https://example.com/salons/shimokitazawa",
+	"telephone": "+81-3-6453-2303",
+	"address": {
+		"@type": "PostalAddress",
+		"addressRegion": "東京都",
+		"addressLocality": "世田谷区",
+		"streetAddress": "北沢2-12-2 レインフォレストビル2F"
+	},
+	"paymentAccepted": "Cash",
+	"priceRange": "¥¥",
+	"areaServed": "Tokyo",
+	"acceptsReservations": true,
+	"openingHoursSpecification": [
+		{
+		"@type": "OpeningHoursSpecification",
+		"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+		"opens": "10:00",
+		"closes": "19:00"
+		}
+	],
+	"sameAs": [
+		"https://beauty.hotpepper.jp/kr/slnH000696973/"
+	]
+	}
+	</script>
+
+	<!-- 大塚2号店 -->
+	<script type="application/ld+json">
+	{
+	"@context": "https://schema.org",
+	"@type": "BeautySalon",
+	"@id": "https://example.com/salons/otsuka-2#store",
+	"name": "まつげパーマ専門店 大塚2号店",
+	"image": "https://example.com/assets/images/awards/pic2.jpg",
+	"url": "https://example.com/salons/otsuka-2",
+	"telephone": "+81-70-6424-1468",
+	"address": {
+		"@type": "PostalAddress",
+		"addressRegion": "東京都",
+		"addressLocality": "豊島区",
+		"streetAddress": "南大塚3-47-5 小田ビル202"
+	},
+	"paymentAccepted": "Cash",
+	"priceRange": "¥¥",
+	"areaServed": "Tokyo",
+	"acceptsReservations": true,
+	"openingHoursSpecification": [
+		{
+		"@type": "OpeningHoursSpecification",
+		"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+		"opens": "10:00",
+		"closes": "19:00"
+		}
+	],
+	"sameAs": [
+		"https://beauty.hotpepper.jp/kr/slnH000752190/"
+	]
+	}
+	</script>
+
 </head>
 <body data-ld-theme="orangy-red">
 <div class="page-wraper">
@@ -150,58 +219,161 @@
         <div class="page-banner" style="background-image:url(assets/images/banner/banner1.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
-                    <h1>Awards</h1>
+                    <h1>サロン予約</h1>
 					<div class="breadcrumb-row">
 						<ul class="list-inline">
-							<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-							<li>Awards</li>
+							<li><a href="index.html"><i class="fa fa-home"></i> ホーム</a></li>
+							<li>サロン予約</li>
 						</ul>
 					</div>
 				 </div>
             </div>
         </div>
 		<!-- end::Page Heading -->
-        
+
 		<div class="content-block" id="content-area">
-			<!-- begin::Awards Section -->
+
+			<!-- start::Page salon -->
 			<div class="section-area bg-gray section-sp1">
-                <div class="container">
+				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 col-md-12 m-b30">
-							<div class="heading-bx">
-								<span class="title-ext m-b0">Awards</span>
-								<h3 class="title-head m-b0">サロン一覧</h3>
-								<div class="ld-separator sepimg"></div>
-								<p class="head-px2">Our purpose follow leading design, engineering and industrial manufacturing company specialising in mining, oil, gas and engineering services.</p>
+						<div class="heading-bx">
+							<span class="title-ext m-b0">サロン</span>
+							<h3 class="title-head m-b0">店舗一覧</h3>
+							<div class="ld-separator sepimg"></div>
+							<p class="head-px2">まつげパーマ専門店の店舗一覧です。各店舗の住所・営業時間・予約方法をご確認のうえご来店ください。</p>
+						</div>
+
+						<div class="row">
+							<!-- 店舗カード：下北沢店 -->
+							<div class="col-md-12 m-b30">
+								<article class="award-bx left" itemscope itemtype="https://schema.org/BeautySalon">
+									<div class="award-media">
+										<img src="assets/images/awards/pic1.jpg" alt="まつげパーマ専門店 下北沢店 外観" loading="lazy" width="640" height="400">
+									</div>
+									<div class="award-info">
+										<h5 class="title" itemprop="name">まつげパーマ専門店 下北沢店</h5>
+
+										<ul class="badges list-inline m-b10" aria-label="店舗特記事項">
+											<li class="badge badge-outline">現金のみ</li>
+											<li class="badge badge-outline">夜間営業日あり</li>
+										</ul>
+
+										<dl class="store-info">
+											<dt>住所</dt>
+											<dd>
+												<address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="m-b0">
+													<span itemprop="postalCode">〒155-0031</span>
+													<span itemprop="addressRegion">東京都</span>
+													<span itemprop="addressLocality">世田谷区</span>
+													<span itemprop="streetAddress">北沢2-12-2 レインフォレストビル2F</span>
+												</address>
+												<a class="link map-link" href="https://www.google.com/maps/search/?api=1&query=東京都世田谷区北沢2-12-2+レインフォレストビル2F" target="_blank" rel="noopener noreferrer" aria-label="地図で開く">地図を開く</a>
+											</dd>
+
+											<dt>電話番号</dt>
+											<dd>
+												<a href="tel:0364532303" itemprop="telephone" aria-label="電話する">03-6453-2303</a>
+											</dd>
+
+											<dt>営業時間</dt>
+											<dd>
+												<p class="m-b5">
+													通常：10:00–19:00（最終受付18:00）<br>
+													夜間営業日：10:00–22:00（最終受付21:00）<br>
+													<small class="text-muted">※夜間営業日は19:00以降に予約がない場合、早めに閉店することがあります。</small>
+												</p>
+											</dd>
+
+											<dt>定休日</dt>
+											<dd>年末年始</dd>
+
+											<dt>お支払い</dt>
+											<dd>現金のみ</dd>
+
+											<dt>WEB予約</dt>
+											<dd>
+												<a class="btn btn-primary btn-sm m-r5"
+													href="https://beauty.hotpepper.jp/kr/slnH000696973/"
+													target="_blank" rel="noopener noreferrer" aria-label="WEB予約（下北沢店）">
+													WEB予約する
+												</a>
+											</dd>
+										</dl>
+
+										<p class="note">ご来店の際は事前予約をおすすめしております。10分以上遅れる場合はご連絡ください。</p>
+									</div>
+								</article>
 							</div>
-							<div class="row">
-								<div class="col-md-12 m-b30">
-									<div class="award-bx left">
-										<div class="award-media"><img src="assets/images/awards/pic1.jpg" alt=""></div>
-										<div class="award-info">
-											<h5 class="title">Glow Excellence Award</h5>
-											<p><strong>Position:</strong> Skincare SpecialistあああああああああああああああSkincare SpecialistあああああああああああああああSkincare Specialistあああああああああああああああ</p>
-											<p><strong>Position:</strong> Skincare Specialist</p>
-											<p><strong>Position:</strong> Skincare Specialist</p>
-										</div>
+
+							<!-- 2号店も同じ構造で。差分のみ（画像/住所/TEL/予約URL）を置換 -->
+							<div class="col-md-12 m-b30">
+								<article class="award-bx left" itemscope itemtype="https://schema.org/BeautySalon">
+									<div class="award-media">
+										<img src="assets/images/awards/pic2.jpg" alt="まつげパーマ専門店 大塚2号店 外観" loading="lazy" width="640" height="400">
 									</div>
-								</div>
-								<div class="col-md-12 m-b30">
-									<div class="award-bx left">
-										<div class="award-media"><img src="assets/images/awards/pic2.jpg" alt=""></div>
-										<div class="award-info">
-											<h5 class="title">Radiant Skin Award</h5>
-											<p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum.</p>
-										</div>
+
+									<div class="award-info">
+										<h5 class="title" itemprop="name">まつげパーマ専門店 大塚2号店</h5>
+
+										<ul class="badges list-inline m-b10" aria-label="店舗特記事項">
+											<li class="badge badge-outline">現金のみ</li>
+											<li class="badge badge-outline">夜間営業日あり</li>
+										</ul>
+
+										<dl class="store-info">
+											<dt>住所</dt>
+											<dd>
+												<address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="m-b0">
+													<span itemprop="postalCode">〒170-0005</span>
+													<span itemprop="addressRegion">東京都</span>
+													<span itemprop="addressLocality">豊島区</span>
+													<span itemprop="streetAddress">南大塚3-47-5 小田ビル202</span>
+												</address>
+												<a class="link map-link" href="https://www.google.com/maps/search/?api=1&query=東京都豊島区南大塚3-47-5+小田ビル202" target="_blank" rel="noopener noreferrer" aria-label="地図で開く">地図を開く</a>
+											</dd>
+
+											<dt>電話番号</dt>
+											<dd>
+												<a href="tel:07064241468" itemprop="telephone">070-6424-1468</a>
+											</dd>
+
+											<dt>営業時間</dt>
+											<dd>
+												通常：10:00–19:00（最終受付18:00<br>
+												夜間営業日：10:00–22:00（最終受付21:00）<br>
+												<small class="text-muted">※夜間営業日は19:00以降に予約がない場合、早めに閉店することがあります。</small>
+											</dd>
+
+											<dt>定休日</dt>
+											<dd>年末年始</dd>
+
+											<dt>お支払い</dt>
+											<dd>現金のみ</dd>
+
+											<dt>WEB予約</dt>
+											<dd>
+												<a class="btn btn-primary btn-sm"
+													href="https://beauty.hotpepper.jp/kr/slnH000752190/"
+													target="_blank" rel="noopener noreferrer" aria-label="WEB予約（大塚2号店）">
+													WEB予約する
+												</a>
+											</dd>
+										</dl>
+
+										<p class="note">ご来店の際は事前予約をおすすめしております。10分以上遅れる場合はご連絡ください。</p>
+
 									</div>
-								</div>
+								</article>
 							</div>
 						</div>
+						</div>
 					</div>
-                </div>
-            </div>
-			<!-- end::Awards Section -->
-            
+				</div>
+			</div>
+			<!-- end::Page salon -->
+
 			<!-- begin::Our Partners & Clients -->
 			<div class="section-area section-sp2 bg-light">
 				<div class="container wow fadeIn" data-wow-delay="0.8s">
