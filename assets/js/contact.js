@@ -175,49 +175,52 @@ Theme Version:	1.0.0
 	-------------------------------------------*/  
 	// contact page contact form
 	if ($("#contact-form-s2").length) {
-		// 直接使用日语消息（移除多语言检测）
+		// 直接使用日语消息
 		const messages = {
 			name: "お名前を入力してください",
-			email: "メールアドレスを请输入してください",
+			email: "メールアドレスを入力してください",
 			phone: "電話番号を入力してください",
-			note: "お問い合わせ内容を入力してください"
+			subject: "件名を入力してください",
+			message: "お問い合わせ内容を入力してください"
 		};
 
 		$("#contact-form-s2").validate({
 			rules: {
-				company_name: {
-					required: false
-				},
 				name: {
 					required: true,
 					minlength: 2
 				},
-				email: "required",
-				
+				email: {
+					required: true,
+					email: true
+				},
 				phone: {
 					required: true
 				},
-				
-				note: {
+				subject: {
 					required: true
 				},
-
+				message: {
+					required: true,
+					minlength: 10
+				}
 			},
 
 			messages: messages,
 
 			submitHandler: function (form) {
 				$("#loader").css("display", "inline-block");
+				$("button[name='submit']").prop("disabled", true);
 
-				var mailContent = "会社名: " + $('#company_name').val() + "\n";
-				mailContent += "お名前: " + $('#name').val() + "\n";
+				var mailContent = "お名前: " + $('#name').val() + "\n";
 				mailContent += "メールアドレス: " + $('#email').val() + "\n";
 				mailContent += "電話番号: " + $('#phone').val() + "\n";
-				mailContent += "メッセージ: " + $('#note').val() + "\n";
+				mailContent += "件名: " + $('#subject').val() + "\n";
+				mailContent += "メッセージ:\n" + $('#message').val() + "\n";
 		
 				var toList = ["shouyi.li@apasys.co.jp"];
 				var data = { 
-					title: "【重要】【全社全般】からの問い合わせを早急にご確認ください。",
+					title: "【重要】ウェブサイトからの問い合わせを早急にご確認ください。",
 					content: mailContent,
 					toList: toList,
 					formsendbox_id: "b309590d3bb80e140873d729be7c8d6d",
@@ -226,7 +229,7 @@ Theme Version:	1.0.0
 
 				$.ajax({
 					type: 'POST',
-					datatype: 'text',
+					dataType: 'text',
 					url: 'https://formsendbox.com/sendSimpleMail',
 					data: JSON.stringify(data),
 					contentType: 'application/json',
@@ -234,25 +237,27 @@ Theme Version:	1.0.0
 						xhr.withCredentials = true;
 					},
 					crossDomain: true,
-					success: function () {
-						$( "#loader").hide();
-						$( "#success").slideDown( "slow" );
+					success: function (response) {
+						$("#loader").hide();
+						$("button[name='submit']").prop("disabled", false);
+						$("#success").slideDown("slow");
 						setTimeout(function() {
-						$( "#success").slideUp( "slow" );
+							$("#success").slideUp("slow");
 						}, 5000);
 						form.reset();
 					},
-					error: function() {
-						$( "#loader").hide();
-						$( "#error").slideDown( "slow" );
+					error: function(xhr, status, error) {
+						$("#loader").hide();
+						$("button[name='submit']").prop("disabled", false);
+						$("#error").slideDown("slow");
 						setTimeout(function() {
-						$( "#error").slideUp( "slow" );
+							$("#error").slideUp("slow");
 						}, 5000);
+						console.error("送信エラー:", error);
 					}
 				});
 				return false; 
 			}
-
 		});
 	}
 

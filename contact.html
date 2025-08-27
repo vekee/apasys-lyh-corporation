@@ -181,43 +181,50 @@
 									<div class="col-lg-6 col-sm-6 col-md-6">
 										<div class="form-group advance-input">
 											<label>お名前</label>
-											<input name="name" type="text" required class="form-control valid-character">
+											<input name="name" id="name" type="text" required class="form-control valid-character">
 										</div>
 									</div>
 									<div class="col-lg-6 col-sm-6 col-md-6">
 										<div class="form-group advance-input">
 											<label>メールアドレス</label>
-											<input name="email" type="email" class="form-control" required >
+											<input name="email" id="email" type="email" class="form-control" required >
 										</div>
 									</div>
 									<div class="col-lg-6 col-sm-6 col-md-6">
 										<div class="form-group advance-input">
 											<label>電話番号</label>
-											<input name="phone" type="text" required class="form-control int-value">
+											<input name="phone" id="phone" type="text" required class="form-control int-value">
 										</div>
 									</div>
 									<div class="col-lg-6 col-sm-6 col-md-6">
 										<div class="form-group advance-input">
 											<label>件名</label>
-											<input name="subject" type="text" required class="form-control">
+											<input name="subject" id="subject" type="text" required class="form-control">
 										</div>
 									</div>
 									<div class="col-lg-12">
 										<div class="form-group advance-input">
 											<label>メッセージ</label>
-											<textarea name="message" rows="4" class="form-control" required ></textarea>
+											<textarea name="message" id="message" rows="4" class="form-control" required ></textarea>
 										</div>
 									</div>
-									<div class="col col-xs-12">
-										<div class="error-handling-messages">
-											<div id="success">お問い合わせいただきありがとうございます。</div>
-											<div id="error">メール送信中にエラーが発生しました。しばらくしてから再度お試しください。</div>
+									
+									<div class="col-lg-12">
+										<div class="submit-btn">
+											<button name="submit" type="submit" value="Submit" class="btn btn-primary radius-xl btn-slide-up-text">
+												<span class="data-text text-white" data-text="メッセージを送信">メッセージを送信</span>
+											</button>
+											<div id="loader" style="display: none; margin-top: 15px;">
+												<i class="fa fa-refresh fa-spin fa-2x fa-fw"></i>
+												<span>送信中...</span>
+											</div>
 										</div>
 									</div>
 									<div class="col-lg-12">
-										<button name="submit" type="submit" value="Submit" class="btn btn-primary radius-xl btn-slide-up-text">
-											<span class="data-text text-white" data-text="メッセージを送信">メッセージを送信</span>
-										</button>
+										<div class="error-handling-messages">
+											<div id="success" style="display: none;">お問い合わせいただきありがとうございます。</div>
+											<div id="error" style="display: none;">メール送信中にエラーが発生しました。しばらくしてから再度お試しください。</div>
+										</div>
 									</div>
 								</div>
 							</form>
@@ -227,7 +234,7 @@
 								<div class="col-lg-12 col-md-6">
 									<div class="contact-icon-box">
 										<h5 class="title"><i class="icon la la-map-marker-alt"></i>住所</h5>		
-										<p>2005 Stokes Isle Apt. 896, Venaville 10010, USA</p>
+										<p>埼玉県さいたま市南区文蔵二丁目30番8-2号</p>
 										<i class="la la-map-marker-alt bg-icon"></i>
 									</div>
 								</div>
