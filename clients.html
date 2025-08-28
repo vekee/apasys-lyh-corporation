@@ -61,7 +61,31 @@
 	<!-- begin::Template Stylesheet -->
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<!-- end::Template Stylesheet -->
+	<style>
+		/* ロゴが無い場合の頭文字アバター */
+		.avatar-circle{
+			display:inline-flex; align-items:center; justify-content:center;
+			width:96px; height:96px; border-radius:50%;
+			background:#f3f4f6; font-weight:700; font-size:24px; color:#b6554f;
+		}
 
+		.client-logo.fixed-height {
+			display: flex;
+			align-items: center;   /* 縦方向の中央寄せ */
+			justify-content: center; /* 横方向の中央寄せ */
+			height: 140px;     /* ここで高さを揃える（任意の値に調整） */
+			text-align: center;
+			background:#b6554f;
+		}
+
+		.client-logo.fixed-height p {
+			margin: 0;
+			font-size: 14px;
+			line-height: 1.4;
+			color:#f3f4f6
+		}
+
+	</style>
 </head>
 <body data-ld-theme="orangy-red">
 <div class="page-wraper">
@@ -150,11 +174,11 @@
         <div class="page-banner" style="background-image:url(assets/images/banner/banner1.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
-                    <h1>Partners</h1>
+                    <h1>関連会社</h1>
 					<div class="breadcrumb-row">
 						<ul class="list-inline">
-							<li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-							<li>Partners</li>
+							<li><a href="index.html"><i class="fa fa-home"></i> ホーム</a></li>
+							<li>関連会社</li>
 						</ul>
 					</div>
 				 </div>
@@ -162,138 +186,120 @@
         </div>
 		<!-- end::Page Heading -->
         
+		<!-- begin::Our Clients -->
 		<div class="content-block" id="content-area">
-            
-			<!-- begin::Our Clients -->
 			<div class="section-area bg-gray section-sp1">
-                <div class="container">
+				<div class="container">
 					<div class="row">
-						<div class="col-lg-12 col-md-12 m-sm-b30">
-							<div class="heading-bx">
-								<span class="title-ext m-b0">Partners</span>
-								<h3 class="title-head m-b0">Our Clients</h3>
-								<div class="ld-separator sepimg"></div>
-								<p class="head-px2">We provide personalized skincare solutions that enhance your natural beauty, boosting confidence with expert care and premium treatments.</p>
-							</div>
-							<div class="row m-b30">
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo1.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo2.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo3.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo4.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo5.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo6.png" alt=""></a>
-									</div>
-								</div>
-							</div>
-							<div class="heading-bx">
-								<span class="title-ext m-b0">Sponsors</span>
-								<h3 class="title-head m-b0">Our Sponsors</h3>
-								<div class="ld-separator sepimg"></div>
-								<p class="head-px2">Partner with us to expand your reach, promote healthy skin, and drive mutual growth through trusted, innovative skincare services.</p>
-							</div>
-							<div class="row">
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo1.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo2.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo3.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo4.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo5.png" alt=""></a>
-									</div>
-								</div>
-								<div class="col-md-6 col-lg-4 col-6 m-b30">
-									<div class="client-logo text-center p-a20 bg-white radius-md">
-										<a href="javascript:void(0);"><img src="assets/images/partner/logo6.png" alt=""></a>
-									</div>
-								</div>
-							</div>
+					<div class="col-lg-12 col-md-12 m-sm-b30">
+						<div class="heading-bx">
+							<span class="title-ext m-b0">関連会社</span>
+							<h3 class="title-head m-b0">関連会社一覧</h3>
+							<div class="ld-separator sepimg"></div>
+							<p class="head-px2">当社の事業をともに支える関連会社をご紹介します。</p>
 						</div>
+
+						<!-- グリッド -->
+						<div class="row m-b30" role="list">
+						<!-- カード: HKGメディカルホールディングス株式会社 -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<!-- ロゴが用意できたら img を表示。なければ頭文字アバター -->
+							<!-- <a href="https://example.com" target="_blank" rel="noopener noreferrer"> -->
+								<div class="logo-fallback avatar-circle" aria-hidden="true">HKG</div>
+								<!-- 例: <img src="assets/images/partner/hkg-medical.png" alt="HKGメディカルホールディングス株式会社 ロゴ" loading="lazy"> -->
+							<!-- </a> -->
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">HKGメディカルホールディングス株式会社</h4>
+							</article>
+						</div>
+
+						<!-- 株式会社グローバルリンク -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">GL</div>
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">株式会社グローバルリンク</h4>
+							</article>
+						</div>
+
+						<!-- 信華信技術股份有限公司（海外） -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">華信</div>
+							<h4 class="m-t5 m-b0 font-16" itemprop="name">
+								華信技術股份有限公司 <small class="text-muted">（海外）</small>
+							</h4>
+							</article>
+						</div>
+
+						<!-- 株式会社CS -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">CS</div>
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">株式会社CS</h4>
+							</article>
+						</div>
+
+						<!-- センシア製薬株式会社 -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">セ</div>
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">センシア製薬株式会社</h4>
+							</article>
+						</div>
+
+						<!-- 株式会社フジシン -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">フ</div>
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">株式会社フジシン</h4>
+							</article>
+						</div>
+						</div>
+						<!-- /グリッド -->
 					</div>
-                </div>
-            </div>
+					</div>
+				</div>
+			</div>
 			<!-- end::Our Clients -->
             
 			<!-- begin::Our Partners & Clients -->
 			<div class="section-area section-sp2 bg-light">
 				<div class="container wow fadeIn" data-wow-delay="0.8s">
 					<div class="heading-bx text-center">
-						<span class="title-ext m-b0">Our Partner</span>
-						<h2 class="title-head m-b0">Partners & Clients</h2>
+						<span class="title-ext m-b0">関連会社</span>
+						<h2 class="title-head m-b0">関連会社 & お取引先</h2>
 						<div class="ld-separator sepimg"></div>
 					</div>
 					<div class="swiper client-logo-swiper">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<div class="client-logo">
-									<a href="javascript:void(0);"><img src="assets/images/partner/logo1.png" alt=""></a>
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">HKGメディカルホールディングス株式会社</p>
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="client-logo">
-									<a href="javascript:void(0);"><img src="assets/images/partner/logo2.png" alt=""></a>
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">株式会社グローバルリンク</p>
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="client-logo">
-									<a href="javascript:void(0);"><img src="assets/images/partner/logo3.png" alt=""></a>
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">株式会社CS</p>
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="client-logo">
-									<a href="javascript:void(0);"><img src="assets/images/partner/logo4.png" alt=""></a>
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">華信技術股份有限公司（海外）</p>
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="client-logo">
-									<a href="javascript:void(0);"><img src="assets/images/partner/logo5.png" alt=""></a>
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">センシア製薬株式会社</p>
 								</div>
 							</div>
 							<div class="swiper-slide">
-								<div class="client-logo">
-									<a href="javascript:void(0);"><img src="assets/images/partner/logo6.png" alt=""></a>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo">
-									<a href="javascript:void(0);"><img src="assets/images/partner/logo5.png" alt=""></a>
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">株式会社フジシン</p>
 								</div>
 							</div>
 						</div>
