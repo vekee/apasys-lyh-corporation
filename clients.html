@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 
 	<!-- begin::Meta Basic -->
@@ -61,7 +61,31 @@
 	<!-- begin::Template Stylesheet -->
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<!-- end::Template Stylesheet -->
+	<style>
+		/* ロゴが無い場合の頭文字アバター */
+		.avatar-circle{
+			display:inline-flex; align-items:center; justify-content:center;
+			width:96px; height:96px; border-radius:50%;
+			background:#f3f4f6; font-weight:700; font-size:24px; color:#b6554f;
+		}
 
+		.client-logo.fixed-height {
+			display: flex;
+			align-items: center;   /* 縦方向の中央寄せ */
+			justify-content: center; /* 横方向の中央寄せ */
+			height: 140px;     /* ここで高さを揃える（任意の値に調整） */
+			text-align: center;
+			background:#b6554f;
+		}
+
+		.client-logo.fixed-height p {
+			margin: 0;
+			font-size: 14px;
+			line-height: 1.4;
+			color:#f3f4f6
+		}
+
+	</style>
 </head>
 <body data-ld-theme="orangy-red">
 <div class="page-wraper">
@@ -144,130 +168,148 @@
     </header>
 	<!-- end::Header -->
 	
-	<main class="page-content bg-light">
-
+    <main class="page-content bg-light">
+		
 		<!-- begin::Page Heading -->
-		<div class="page-banner"  style="background-image:url(assets/images/banner/banner2.jpg);">
-			<div class="container">
-				<div class="page-banner-entry">
-					<h1>お問い合わせ</h1>
+        <div class="page-banner" style="background-image:url(assets/images/banner/banner1.jpg);">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1>関連会社</h1>
 					<div class="breadcrumb-row">
 						<ul class="list-inline">
 							<li><a href="index.html"><i class="fa fa-home"></i> ホーム</a></li>
-							<li>お問い合わせ</li>
+							<li>関連会社</li>
 						</ul>
 					</div>
-					</div>
-			</div>
-		</div>		
+				 </div>
+            </div>
+        </div>
 		<!-- end::Page Heading -->
-		
+        
+		<!-- begin::Our Clients -->
 		<div class="content-block" id="content-area">
-			
-			<!-- begin::Contact Us -->
-			<div class="section-area">
-				<div class="container">		
-					<div class="row contact-bx-area2">
-						<div class="col-lg-8 col-md-12 wow fadeIn section-sp4" data-wow-delay="0.4s">
-							<form class="form-area-box ajax-form p-lr30 p-sm-lr5" id="contact-form-s2">
-								<div class="ajax-message"></div>
-								<div class="heading-bx">
-									<span class="title-ext m-b0">お問い合わせ</span>
-									<h3 class="title-head m-b0">スキンケアの専門家にご相談ください！</h3>
-									<div class="ld-separator sepimg"></div>
-									<p class="head-px2">最高の輝く肌を実現するための専門的なアドバイスとパーソナライズされたトリートメントについて、今日からご相談ください！</p>
-								</div>
-								<div class="row placeani">
-									<div class="col-lg-6 col-sm-6 col-md-6">
-										<div class="form-group advance-input">
-											<label>お名前</label>
-											<input name="name" id="name" type="text" required class="form-control valid-character">
-										</div>
-									</div>
-									<div class="col-lg-6 col-sm-6 col-md-6">
-										<div class="form-group advance-input">
-											<label>メールアドレス</label>
-											<input name="email" id="email" type="email" class="form-control" required >
-										</div>
-									</div>
-									<div class="col-lg-6 col-sm-6 col-md-6">
-										<div class="form-group advance-input">
-											<label>電話番号</label>
-											<input name="phone" id="phone" type="text" required class="form-control int-value">
-										</div>
-									</div>
-									<div class="col-lg-6 col-sm-6 col-md-6">
-										<div class="form-group advance-input">
-											<label>件名</label>
-											<input name="subject" id="subject" type="text" required class="form-control">
-										</div>
-									</div>
-									<div class="col-lg-12">
-										<div class="form-group advance-input">
-											<label>メッセージ</label>
-											<textarea name="message" id="message" rows="4" class="form-control" required ></textarea>
-										</div>
-									</div>
-									
-									<div class="col-lg-12">
-										<div class="submit-btn">
-											<button name="submit" type="submit" value="Submit" class="btn btn-primary radius-xl btn-slide-up-text">
-												<span class="data-text text-white" data-text="メッセージを送信">メッセージを送信</span>
-											</button>
-											<div id="loader" style="display: none; margin-top: 15px;">
-												<i class="fa fa-refresh fa-spin fa-2x fa-fw"></i>
-												<span>送信中...</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-12">
-										<div class="error-handling-messages">
-											<div id="success" style="display: none;">お問い合わせいただきありがとうございます。</div>
-											<div id="error" style="display: none;">メール送信中にエラーが発生しました。しばらくしてから再度お試しください。</div>
-										</div>
-									</div>
-								</div>
-							</form>
+			<div class="section-area bg-gray section-sp1">
+				<div class="container">
+					<div class="row">
+					<div class="col-lg-12 col-md-12 m-sm-b30">
+						<div class="heading-bx">
+							<span class="title-ext m-b0">関連会社</span>
+							<h3 class="title-head m-b0">関連会社一覧</h3>
+							<div class="ld-separator sepimg"></div>
+							<p class="head-px2">当社の事業をともに支える関連会社をご紹介します。</p>
 						</div>
-						<div class="col-lg-4 col-md-12 wow fadeIn right-info bg-primary p-sm-lr15" data-wow-delay="0.4s">
-							<div class="row">
-								<div class="col-lg-12 col-md-6">
-									<div class="contact-icon-box">
-										<h5 class="title"><i class="icon la la-map-marker-alt"></i>住所</h5>		
-										<p>埼玉県さいたま市南区文蔵二丁目30番8-2号</p>
-										<i class="la la-map-marker-alt bg-icon"></i>
-									</div>
-								</div>
-								<div class="col-lg-12 col-md-6">
-									<div class="contact-icon-box">
-										<h5 class="title"><i class="icon la la-phone-volume"></i>電話番号</h5>		
-										<p><a href="tel:090-6002-87421">(+81) 090-6002-87421</a></p>
-										<i class="la la-phone-volume bg-icon"></i>
-									</div>
-								</div>
-								<div class="col-lg-12 col-md-6">
-									<div class="contact-icon-box">
-										<h5 class="title"><i class="icon la la-envelope-open"></i>メールアドレス</h5>		
-										<a href="mailto:info@spark-hair.co.jp">info@spark-hair.co.jp</a>
-										<i class="la la-envelope-open bg-icon"></i>
-									</div>
-								</div>
-								<div class="col-lg-12 col-md-6">
-									<div class="contact-icon-box mb-0">
-										<h5 class="title"><i class="icon la la-business-time"></i>営業時間</h5>		
-										<p>月〜金: 9:00 – 18:00</p>
-										<i class="la la-business-time bg-icon"></i>
-									</div>
-								</div>
-							</div>
+
+						<!-- グリッド -->
+						<div class="row m-b30" role="list">
+						<!-- カード: HKGメディカルホールディングス株式会社 -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<!-- ロゴが用意できたら img を表示。なければ頭文字アバター -->
+							<!-- <a href="https://example.com" target="_blank" rel="noopener noreferrer"> -->
+								<div class="logo-fallback avatar-circle" aria-hidden="true">HKG</div>
+								<!-- 例: <img src="assets/images/partner/hkg-medical.png" alt="HKGメディカルホールディングス株式会社 ロゴ" loading="lazy"> -->
+							<!-- </a> -->
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">HKGメディカルホールディングス株式会社</h4>
+							</article>
 						</div>
+
+						<!-- 株式会社グローバルリンク -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">GL</div>
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">株式会社グローバルリンク</h4>
+							</article>
+						</div>
+
+						<!-- 信華信技術股份有限公司（海外） -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">華信</div>
+							<h4 class="m-t5 m-b0 font-16" itemprop="name">
+								華信技術股份有限公司 <small class="text-muted">（海外）</small>
+							</h4>
+							</article>
+						</div>
+
+						<!-- 株式会社CS -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">CS</div>
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">株式会社CS</h4>
+							</article>
+						</div>
+
+						<!-- センシア製薬株式会社 -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">セ</div>
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">センシア製薬株式会社</h4>
+							</article>
+						</div>
+
+						<!-- 株式会社フジシン -->
+						<div class="col-md-6 col-lg-4 col-6 m-b30" role="listitem">
+							<article class="client-logo text-center p-a20 bg-white radius-md" itemscope itemtype="https://schema.org/Organization">
+							<div class="logo-fallback avatar-circle" aria-hidden="true">フ</div>
+							<h4 class="m-t15 m-b0 font-16" itemprop="name">株式会社フジシン</h4>
+							</article>
+						</div>
+						</div>
+						<!-- /グリッド -->
+					</div>
 					</div>
 				</div>
 			</div>
-			<!-- end::Contact Us -->
-		
+			<!-- end::Our Clients -->
+            
+			<!-- begin::Our Partners & Clients -->
+			<div class="section-area section-sp2 bg-light">
+				<div class="container wow fadeIn" data-wow-delay="0.8s">
+					<div class="heading-bx text-center">
+						<span class="title-ext m-b0">関連会社</span>
+						<h2 class="title-head m-b0">関連会社 & お取引先</h2>
+						<div class="ld-separator sepimg"></div>
+					</div>
+					<div class="swiper client-logo-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">HKGメディカルホールディングス株式会社</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">株式会社グローバルリンク</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">株式会社CS</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">華信技術股份有限公司（海外）</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">センシア製薬株式会社</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo text-center p-a20 radius-md fixed-height">
+									<p class="m-t10 m-b0 font-14">株式会社フジシン</p>
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+			</div>
+			<!-- end::Our Partners & Clients -->
+			
 		</div>
-		
+    
 	</main>
     
 	<!-- begin::Footer -->
@@ -345,6 +387,7 @@
 </div>
 <!-- begin::Javascript Files -->
 <script src="assets/libs/global/global.min.js"></script>
+<script src="assets/libs/magnific-popup/magnific-popup.js"></script>
 <script src="assets/js/gsap.js"></script>
 <script src="assets/js/slider.js"></script>
 <script src="assets/js/functions.js"></script>
