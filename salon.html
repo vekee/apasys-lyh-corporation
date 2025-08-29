@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 
 	<!-- begin::Meta Basic -->
@@ -61,6 +61,75 @@
 	<!-- begin::Template Stylesheet -->
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<!-- end::Template Stylesheet -->
+
+	<!-- 会社サイトの正しいドメインに変更してください。画像は実ファイルURLに -->
+	<!-- 下北沢店 -->
+	<script type="application/ld+json">
+	{
+	"@context": "https://schema.org",
+	"@type": "BeautySalon",
+	"@id": "https://example.com/salons/shimokitazawa#store",
+	"name": "まつげパーマ専門店 下北沢店",
+	"image": "https://example.com/assets/images/awards/pic1.jpg",
+	"url": "https://example.com/salons/shimokitazawa",
+	"telephone": "+81-3-6453-2303",
+	"address": {
+		"@type": "PostalAddress",
+		"addressRegion": "東京都",
+		"addressLocality": "世田谷区",
+		"streetAddress": "北沢2-12-2 レインフォレストビル2F"
+	},
+	"paymentAccepted": "Cash",
+	"priceRange": "¥¥",
+	"areaServed": "Tokyo",
+	"acceptsReservations": true,
+	"openingHoursSpecification": [
+		{
+		"@type": "OpeningHoursSpecification",
+		"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+		"opens": "10:00",
+		"closes": "19:00"
+		}
+	],
+	"sameAs": [
+		"https://beauty.hotpepper.jp/kr/slnH000696973/"
+	]
+	}
+	</script>
+
+	<!-- 大塚2号店 -->
+	<script type="application/ld+json">
+	{
+	"@context": "https://schema.org",
+	"@type": "BeautySalon",
+	"@id": "https://example.com/salons/otsuka-2#store",
+	"name": "まつげパーマ専門店 大塚2号店",
+	"image": "https://example.com/assets/images/awards/pic2.jpg",
+	"url": "https://example.com/salons/otsuka-2",
+	"telephone": "+81-70-6424-1468",
+	"address": {
+		"@type": "PostalAddress",
+		"addressRegion": "東京都",
+		"addressLocality": "豊島区",
+		"streetAddress": "南大塚3-47-5 小田ビル202"
+	},
+	"paymentAccepted": "Cash",
+	"priceRange": "¥¥",
+	"areaServed": "Tokyo",
+	"acceptsReservations": true,
+	"openingHoursSpecification": [
+		{
+		"@type": "OpeningHoursSpecification",
+		"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+		"opens": "10:00",
+		"closes": "19:00"
+		}
+	],
+	"sameAs": [
+		"https://beauty.hotpepper.jp/kr/slnH000752190/"
+	]
+	}
+	</script>
 
 </head>
 <body data-ld-theme="orangy-red">
@@ -144,130 +213,220 @@
     </header>
 	<!-- end::Header -->
 	
-	<main class="page-content bg-light">
-
+    <main class="page-content bg-light">
+		
 		<!-- begin::Page Heading -->
-		<div class="page-banner"  style="background-image:url(assets/images/banner/banner2.jpg);">
-			<div class="container">
-				<div class="page-banner-entry">
-					<h1>お問い合わせ</h1>
+        <div class="page-banner" style="background-image:url(assets/images/banner/banner1.jpg);">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1>サロン予約</h1>
 					<div class="breadcrumb-row">
 						<ul class="list-inline">
 							<li><a href="index.html"><i class="fa fa-home"></i> ホーム</a></li>
-							<li>お問い合わせ</li>
+							<li>サロン予約</li>
 						</ul>
 					</div>
-					</div>
-			</div>
-		</div>		
+				 </div>
+            </div>
+        </div>
 		<!-- end::Page Heading -->
-		
+
 		<div class="content-block" id="content-area">
-			
-			<!-- begin::Contact Us -->
-			<div class="section-area">
-				<div class="container">		
-					<div class="row contact-bx-area2">
-						<div class="col-lg-8 col-md-12 wow fadeIn section-sp4" data-wow-delay="0.4s">
-							<form class="form-area-box ajax-form p-lr30 p-sm-lr5" id="contact-form-s2">
-								<div class="ajax-message"></div>
-								<div class="heading-bx">
-									<span class="title-ext m-b0">お問い合わせ</span>
-									<h3 class="title-head m-b0">スキンケアの専門家にご相談ください！</h3>
-									<div class="ld-separator sepimg"></div>
-									<p class="head-px2">最高の輝く肌を実現するための専門的なアドバイスとパーソナライズされたトリートメントについて、今日からご相談ください！</p>
-								</div>
-								<div class="row placeani">
-									<div class="col-lg-6 col-sm-6 col-md-6">
-										<div class="form-group advance-input">
-											<label>お名前</label>
-											<input name="name" id="name" type="text" required class="form-control valid-character">
-										</div>
-									</div>
-									<div class="col-lg-6 col-sm-6 col-md-6">
-										<div class="form-group advance-input">
-											<label>メールアドレス</label>
-											<input name="email" id="email" type="email" class="form-control" required >
-										</div>
-									</div>
-									<div class="col-lg-6 col-sm-6 col-md-6">
-										<div class="form-group advance-input">
-											<label>電話番号</label>
-											<input name="phone" id="phone" type="text" required class="form-control int-value">
-										</div>
-									</div>
-									<div class="col-lg-6 col-sm-6 col-md-6">
-										<div class="form-group advance-input">
-											<label>件名</label>
-											<input name="subject" id="subject" type="text" required class="form-control">
-										</div>
-									</div>
-									<div class="col-lg-12">
-										<div class="form-group advance-input">
-											<label>メッセージ</label>
-											<textarea name="message" id="message" rows="4" class="form-control" required ></textarea>
-										</div>
-									</div>
-									
-									<div class="col-lg-12">
-										<div class="submit-btn">
-											<button name="submit" type="submit" value="Submit" class="btn btn-primary radius-xl btn-slide-up-text">
-												<span class="data-text text-white" data-text="メッセージを送信">メッセージを送信</span>
-											</button>
-											<div id="loader" style="display: none; margin-top: 15px;">
-												<i class="fa fa-refresh fa-spin fa-2x fa-fw"></i>
-												<span>送信中...</span>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-12">
-										<div class="error-handling-messages">
-											<div id="success" style="display: none;">お問い合わせいただきありがとうございます。</div>
-											<div id="error" style="display: none;">メール送信中にエラーが発生しました。しばらくしてから再度お試しください。</div>
-										</div>
-									</div>
-								</div>
-							</form>
+
+			<!-- start::Page salon -->
+			<div class="section-area bg-gray section-sp1">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 m-b30">
+						<div class="heading-bx">
+							<span class="title-ext m-b0">サロン</span>
+							<h3 class="title-head m-b0">店舗一覧</h3>
+							<div class="ld-separator sepimg"></div>
+							<p class="head-px2">まつげパーマ専門店の店舗一覧です。各店舗の住所・営業時間・予約方法をご確認のうえご来店ください。</p>
 						</div>
-						<div class="col-lg-4 col-md-12 wow fadeIn right-info bg-primary p-sm-lr15" data-wow-delay="0.4s">
-							<div class="row">
-								<div class="col-lg-12 col-md-6">
-									<div class="contact-icon-box">
-										<h5 class="title"><i class="icon la la-map-marker-alt"></i>住所</h5>		
-										<p>埼玉県さいたま市南区文蔵二丁目30番8-2号</p>
-										<i class="la la-map-marker-alt bg-icon"></i>
+
+						<div class="row">
+							<!-- 店舗カード：下北沢店 -->
+							<div class="col-md-12 m-b30">
+								<article class="award-bx left" itemscope itemtype="https://schema.org/BeautySalon">
+									<div class="award-media">
+										<img src="assets/images/salon/salon1.jpg" alt="まつげパーマ専門店 下北沢店 外観" loading="lazy" width="640" height="400">
 									</div>
-								</div>
-								<div class="col-lg-12 col-md-6">
-									<div class="contact-icon-box">
-										<h5 class="title"><i class="icon la la-phone-volume"></i>電話番号</h5>		
-										<p><a href="tel:090-6002-87421">(+81) 090-6002-87421</a></p>
-										<i class="la la-phone-volume bg-icon"></i>
+									<div class="award-info">
+										<h5 class="title" itemprop="name">まつげパーマ専門店 下北沢店</h5>
+
+										<ul class="badges list-inline m-b10" aria-label="店舗特記事項">
+											<li class="badge badge-outline">現金のみ</li>
+											<li class="badge badge-outline">夜間営業日あり</li>
+										</ul>
+
+										<dl class="store-info">
+											<dt>住所</dt>
+											<dd>
+												<address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="m-b0">
+													<span itemprop="postalCode">〒155-0031</span>
+													<span itemprop="addressRegion">東京都</span>
+													<span itemprop="addressLocality">世田谷区</span>
+													<span itemprop="streetAddress">北沢2-12-2 レインフォレストビル2F</span>
+												</address>
+												<a class="link map-link" href="https://www.google.com/maps/search/?api=1&query=東京都世田谷区北沢2-12-2+レインフォレストビル2F" target="_blank" rel="noopener noreferrer" aria-label="地図で開く">地図を開く</a>
+											</dd>
+
+											<dt>電話番号</dt>
+											<dd>
+												<a href="tel:0364532303" itemprop="telephone" aria-label="電話する">03-6453-2303</a>
+											</dd>
+
+											<dt>営業時間</dt>
+											<dd>
+												<p class="m-b5">
+													通常：10:00–19:00（最終受付18:00）<br>
+													夜間営業日：10:00–22:00（最終受付21:00）<br>
+													<small class="text-muted">※夜間営業日は19:00以降に予約がない場合、早めに閉店することがあります。</small>
+												</p>
+											</dd>
+
+											<dt>定休日</dt>
+											<dd>年末年始</dd>
+
+											<dt>お支払い</dt>
+											<dd>現金のみ</dd>
+
+											<dt>WEB予約</dt>
+											<dd>
+												<a class="btn btn-primary btn-sm m-r5"
+													href="https://beauty.hotpepper.jp/kr/slnH000696973/"
+													target="_blank" rel="noopener noreferrer" aria-label="WEB予約（下北沢店）">
+													WEB予約する
+												</a>
+											</dd>
+										</dl>
+
+										<p class="note">ご来店の際は事前予約をおすすめしております。10分以上遅れる場合はご連絡ください。</p>
 									</div>
-								</div>
-								<div class="col-lg-12 col-md-6">
-									<div class="contact-icon-box">
-										<h5 class="title"><i class="icon la la-envelope-open"></i>メールアドレス</h5>		
-										<a href="mailto:info@spark-hair.co.jp">info@spark-hair.co.jp</a>
-										<i class="la la-envelope-open bg-icon"></i>
-									</div>
-								</div>
-								<div class="col-lg-12 col-md-6">
-									<div class="contact-icon-box mb-0">
-										<h5 class="title"><i class="icon la la-business-time"></i>営業時間</h5>		
-										<p>月〜金: 9:00 – 18:00</p>
-										<i class="la la-business-time bg-icon"></i>
-									</div>
-								</div>
+								</article>
 							</div>
+
+							<!-- 2号店も同じ構造で。差分のみ（画像/住所/TEL/予約URL）を置換 -->
+							<div class="col-md-12 m-b30">
+								<article class="award-bx left" itemscope itemtype="https://schema.org/BeautySalon">
+									<div class="award-media">
+										<img src="assets/images/salon/salon2.jpg" alt="まつげパーマ専門店 大塚2号店 外観" loading="lazy" width="640" height="400">
+									</div>
+
+									<div class="award-info">
+										<h5 class="title" itemprop="name">まつげパーマ専門店 大塚2号店</h5>
+
+										<ul class="badges list-inline m-b10" aria-label="店舗特記事項">
+											<li class="badge badge-outline">現金のみ</li>
+											<li class="badge badge-outline">夜間営業日あり</li>
+										</ul>
+
+										<dl class="store-info">
+											<dt>住所</dt>
+											<dd>
+												<address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="m-b0">
+													<span itemprop="postalCode">〒170-0005</span>
+													<span itemprop="addressRegion">東京都</span>
+													<span itemprop="addressLocality">豊島区</span>
+													<span itemprop="streetAddress">南大塚3-47-5 小田ビル202</span>
+												</address>
+												<a class="link map-link" href="https://www.google.com/maps/search/?api=1&query=東京都豊島区南大塚3-47-5+小田ビル202" target="_blank" rel="noopener noreferrer" aria-label="地図で開く">地図を開く</a>
+											</dd>
+
+											<dt>電話番号</dt>
+											<dd>
+												<a href="tel:07064241468" itemprop="telephone">070-6424-1468</a>
+											</dd>
+
+											<dt>営業時間</dt>
+											<dd>
+												通常：10:00–19:00（最終受付18:00<br>
+												夜間営業日：10:00–22:00（最終受付21:00）<br>
+												<small class="text-muted">※夜間営業日は19:00以降に予約がない場合、早めに閉店することがあります。</small>
+											</dd>
+
+											<dt>定休日</dt>
+											<dd>年末年始</dd>
+
+											<dt>お支払い</dt>
+											<dd>現金のみ</dd>
+
+											<dt>WEB予約</dt>
+											<dd>
+												<a class="btn btn-primary btn-sm"
+													href="https://beauty.hotpepper.jp/kr/slnH000752190/"
+													target="_blank" rel="noopener noreferrer" aria-label="WEB予約（大塚2号店）">
+													WEB予約する
+												</a>
+											</dd>
+										</dl>
+
+										<p class="note">ご来店の際は事前予約をおすすめしております。10分以上遅れる場合はご連絡ください。</p>
+
+									</div>
+								</article>
+							</div>
+						</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end::Contact Us -->
-		
+			<!-- end::Page salon -->
+
+			<!-- begin::Our Partners & Clients -->
+			<div class="section-area section-sp2 bg-light">
+				<div class="container wow fadeIn" data-wow-delay="0.8s">
+					<div class="heading-bx text-center">
+						<span class="title-ext m-b0">Our Partner</span>
+						<h2 class="title-head m-b0">Partners & Clients</h2>
+						<div class="ld-separator sepimg"></div>
+					</div>
+					<div class="swiper client-logo-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="client-logo">
+									<a href="javascript:void(0);"><img src="assets/images/partner/logo1.png" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo">
+									<a href="javascript:void(0);"><img src="assets/images/partner/logo2.png" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo">
+									<a href="javascript:void(0);"><img src="assets/images/partner/logo3.png" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo">
+									<a href="javascript:void(0);"><img src="assets/images/partner/logo4.png" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo">
+									<a href="javascript:void(0);"><img src="assets/images/partner/logo5.png" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo">
+									<a href="javascript:void(0);"><img src="assets/images/partner/logo6.png" alt=""></a>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="client-logo">
+									<a href="javascript:void(0);"><img src="assets/images/partner/logo5.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+			</div>
+			<!-- end::Our Partners & Clients -->
+			
 		</div>
-		
+    
 	</main>
     
 	<!-- begin::Footer -->

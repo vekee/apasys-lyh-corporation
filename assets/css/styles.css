@@ -47,6 +47,15 @@
 	========== ========== ==========
 */
 /* Google Fonts */
+/* Google Fonts（和文対応） */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&display=swap");
+
+/* （必要なら既存英字用フォントは残してOKだが、和文優先に並べ替え） */
+/* @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+/* ...ほか既存importは任意 */
 @import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
@@ -61,7 +70,7 @@
 @import "./../libs/lucide/lucide.css";
 :root {
   --custom-shadow: 0 2px 4px 0 rgba(225, 229, 237, 0.2);
-  --bs-headings-font-family: Gotu, serif;
+  --bs-headings-font-family: "Noto Sans JP", sans-serif;
 }
 
 body[data-bs-theme=dark] {
@@ -149,10 +158,10 @@ body[data-bs-theme=dark] {
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "YuGothic", "Meiryo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: "Kanit", serif;
+  --bs-body-font-family: "Noto Sans JP", sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.6;
@@ -295,7 +304,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Gotu", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   line-height: 1.25;
   color: var(--bs-heading-color);
@@ -5923,7 +5932,7 @@ textarea.form-control-lg {
   z-index: var(--bs-tooltip-zindex);
   display: block;
   margin: var(--bs-tooltip-margin);
-  font-family: "Kanit", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6033,7 +6042,7 @@ textarea.form-control-lg {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family: "Kanit", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -13388,7 +13397,7 @@ dl dd {
 .menu-links .nav > li.menu-item-has-children:before {
   content: "\f078";
   display: block;
-  font-family: "FontAwesome";
+  font-family: "Noto Sans JP", sans-serif;
   right: 4px;
   position: absolute;
   top: 50%;
@@ -14137,7 +14146,7 @@ dl dd {
   align-items: center;
   font-size: 14px;
   color: #fff;
-  font-family: "Kanit";
+  font-family: "Noto Sans JP", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 1px;
@@ -14159,7 +14168,7 @@ dl dd {
   background-color: transparent;
   color: #999999;
   font-size: 18px;
-  font-family: "Kanit";
+  font-family: "Noto Sans JP", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   display: inline-block;
@@ -14263,7 +14272,7 @@ dl dd {
   padding: 10px 0;
 }
 .header-v3 .header-classic .navbar-nav li a {
-  font-family: "Kanit";
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 80px;
   font-weight: 400;
   line-height: 1;
@@ -18853,7 +18862,7 @@ footer .widget_services ul li:hover {
   font-weight: 600;
   font-size: 16px;
   display: block;
-  font-family: "Gotu", serif;
+  font-family: "Noto Sans JP", sans-serif;
   margin-bottom: 7px;
 }
 @media (max-width: 767.98px) {
@@ -19087,7 +19096,7 @@ footer .widget_services ul li:hover {
 }
 .heading-bx.style5 .title-ext {
   font-size: 24px;
-  font-family: "Damion", cursive;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
   line-height: 1.2;
@@ -20792,7 +20801,7 @@ blockquote::after {
   position: absolute;
   right: 20px;
   bottom: 15px;
-  font-family: "Font Awesome 6 Free";
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
   font-size: 35px;
   color: var(--bs-primary);
@@ -20804,7 +20813,7 @@ blockquote p {
   line-height: 40px;
   margin-bottom: 0px;
   font-weight: 600;
-  font-family: "Gotu", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 @media only screen and (max-width: 767px) {
   blockquote {
@@ -22414,7 +22423,7 @@ button.back-to-top {
   line-height: 1.4;
 }
 .client-feedback-five .feedback-info {
-  font-family: "Manrope";
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   font-size: 16px;
   margin-top: 25px;
@@ -24068,7 +24077,7 @@ button.back-to-top {
   border-width: 0 0 1px 0;
 }
 .pricingtable-wrapper .pricingtable-bx {
-  font-family: "Gotu", serif;
+  font-family: "Noto Sans JP", sans-serif;
   color: var(--bs-dark);
   font-size: 60px;
   font-weight: 700;
@@ -24147,7 +24156,7 @@ button.back-to-top {
   position: relative;
   top: 10px;
   color: var(--bs-dark);
-  font-family: "Gotu", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .pricingtable-wrapper .pricingtable-highlight.pricingtable-inner {
   background: var(--bs-primary);
@@ -24564,7 +24573,7 @@ button.back-to-top {
 }
 .pricingtable-wrapper6 .pricing-list ul li a::after {
   content: "\e494";
-  font-family: "lucide";
+  font-family: "Noto Sans JP", sans-serif;
   position: absolute;
   right: 20px;
   font-size: 24px;
@@ -25658,7 +25667,7 @@ button.back-to-top {
 .list-pen li:before,
 .list-heart li:before,
 .list-star li:before {
-  font-family: "FontAwesome";
+  font-family: "Noto Sans JP", sans-serif;
   position: absolute;
   left: 0;
   top: 5px;
@@ -25679,7 +25688,7 @@ button.back-to-top {
 .right.list-pen li:before,
 .right.list-heart li:before,
 .right.list-star li:before {
-  font-family: "FontAwesome";
+  font-family: "Noto Sans JP", sans-serif;
   position: absolute;
   left: auto;
   right: 0;
@@ -25717,7 +25726,7 @@ ul[class*=list-] {
 
 .list-checked li:before {
   content: "\e64d";
-  font-family: "themify";
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 15px;
 }
 
@@ -26747,7 +26756,7 @@ ul[class*=list-].fs16 {
   z-index: 1;
 }
 .timeline-date h6, .timeline-date .h6 {
-  font-family: "Kanit", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   color: var(--bs-primary);
   letter-spacing: 1px;
@@ -29104,7 +29113,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   position: absolute;
   left: -20px;
   bottom: 0;
-  font-family: "Kanit";
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 800;
   font-size: 310px;
   line-height: 220px;
@@ -30170,7 +30179,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   margin-bottom: 30px;
 }
 .hero-slider4 .title span {
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: italic;
 }
 .hero-slider4 .hero-content {
@@ -31870,7 +31879,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 
 .btn-salon {
   font-size: 14px;
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
 }
 .btn-salon.btn-primary {
@@ -31915,7 +31924,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 }
 .hero-slider8 .title-ext {
   font-size: 24px;
-  font-family: "Damion", cursive;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
   line-height: 1.2;
@@ -32281,7 +32290,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   gap: 20px;
 }
 .offer-wrap-box .offer-wrap .offer {
-  font-family: "DM Serif Display";
+  font-family: "Noto Sans JP", sans-serif;
   font-style: italic;
   font-weight: 600;
   font-size: 24px;
@@ -32534,7 +32543,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   display: block;
   color: #fff;
   line-height: 1.2;
-  font-family: "Gotu", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .comign-soon .comign-soon-area .title {
   font-size: 65px;
@@ -32822,7 +32831,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   line-height: 30px;
   font-weight: 400;
   margin-bottom: 30px;
-  font-family: "Kanit", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .error-page p {
   font-size: 16px;
@@ -33173,7 +33182,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 }
 .service-list.style-2 li a::after {
   content: "\f30b";
-  font-family: "Line Awesome Free";
+  font-family: "Noto Sans JP", sans-serif;
   width: auto;
   height: auto;
   background: transparent;
@@ -34373,7 +34382,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 .meta-item .title,
 .product-quantity .title {
   color: #5a564d;
-  font-family: "Kanit", serif;
+  font-family: "Noto Sans JP", sans-serif;
   margin-bottom: 0;
   width: 120px;
   font-size: 15px;
