@@ -21394,14 +21394,14 @@ button.back-to-top {
 }
 .about-img-inner .title {
   color: #fff;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 20px;
+  line-height: 20px;
   font-weight: 300;
   margin-bottom: 5px;
 }
 .about-img-inner .title span {
   font-weight: 700;
-  line-height: 60px;
+  line-height: 20px;
 }
 .about-img-inner div > span {
   font-weight: 400;
