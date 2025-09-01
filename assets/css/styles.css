@@ -21394,7 +21394,7 @@ button.back-to-top {
 }
 .about-img-inner .title {
   color: #fff;
-  font-size: 20px;
+  font-size: clamp(14px, 5vw, 20px); /* 画面幅に応じて可変 */
   line-height: 20px;
   font-weight: 300;
   margin-bottom: 5px;
@@ -35102,12 +35102,12 @@ ol.comment-list li.comment .comment-respond .comment-form p {
     padding: 5px 0;
   }
   .about-img-inner .title {
-    font-size: 40px;
+    font-size: 20px;
     line-height: 50px;
     margin-bottom: 0;
   }
   .about-img-inner .title span {
-    line-height: 50px;
+    line-height: 20px;
   }
   .about-img-inner div > span {
     font-size: 12px;
