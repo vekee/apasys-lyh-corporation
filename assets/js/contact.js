@@ -59,7 +59,8 @@
 			if (!checkSelectorExistence('.ajax-form')) { return; }
 
 			// Set reCAPTCHA callbacks
-			jQuery('form').on('submit', function(e) {
+			// jQuery('form').on('submit', function(e) {
+			$('#contact-form').on('submit', function(e) {
 				e.preventDefault();
 
 				var $form = jQuery(this);
@@ -106,7 +107,8 @@
 		var subscriptionForm = function() {
 			if (!checkSelectorExistence('.subscribe-form1, .subscribe-form')) { return; }
 
-			jQuery('.subscribe-form1, .subscribe-form').on('submit', function(event) {
+			// jQuery('.subscribe-form1, .subscribe-form').on('submit', function(event) {
+			$('#subscribe-form').on('submit', function(event) {
 				event.preventDefault();
 
 				var $form = jQuery(this);
@@ -121,7 +123,7 @@
 				var response = '<div class="alert alert-warning alert-dismissable">送信中...</div>';
 				$form.find(".ajax-message").html(response).show('slow');
 
-				mailContent = "メールアドレス: " + email + "\n";
+				var mailContent = "メールアドレス: " + email + "\n";
 		
 				var toList = ["info@spark-hair.co.jp"];
 				var data = { 
