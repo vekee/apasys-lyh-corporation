@@ -1,13 +1,3 @@
-/*
-***
-***
-Name: 			contact.js
-Written by: 	LayoutDrop
-Theme Version:	1.0.0
-***
-***
-*/
-
 (function($) {
 	
 	'use strict';
@@ -73,41 +63,46 @@ Theme Version:	1.0.0
 				e.preventDefault();
 
 				var $form = jQuery(this);
-				var response = '<div class="alert alert-warning alert-dismissable">Processing...</div>';
+				var response = '<div class="alert alert-warning alert-dismissable">送信中...</div>';
 				$form.find(".ajax-message").html(response).show('slow');
-				var form = $(this).closest('form')[0]; // get the form element
-				var formData = new FormData(form);     // ✅ works now
+
+				var mailContent = "お名前: " + $('#name').val() + "\n";
+				mailContent += "メールアドレス: " + $('#email').val() + "\n";
+				mailContent += "電話番号: " + $('#phone').val() + "\n";
+				mailContent += "件名: " + $('#subject').val() + "\n";
+				mailContent += "メッセージ:\n" + $('#message').val() + "\n";
+		
+				var toList = ["info@spark-hair.co.jp"];
+				var data = { 
+					title: "【重要】ウェブサイトからの問い合わせを早急にご確認ください。",
+					content: mailContent,
+					toList: toList,
+					formsendbox_id: "b309590d3bb80e140873d729be7c8d6d",
+					formsendbox_key: "2b2731af96cc3d862395993a7ba1188d"
+				};
 			
 				//	var formAction = $form.attr('action');
 				$.ajax({
 					type: 'POST',
-					url: 'assets/script/contact.php',
-					data: formData,
-					dataType: 'json',
-					contentType: false, // required for FormData
-					processData: false, // required for FormData
+					url: 'https://formsendbox.com/sendSimpleMail',
+					data: JSON.stringify(data),
+					dataType: 'text',
+					contentType: 'application/json',
 					success: function(data) {
 						var response;
-						if (data.status == 1) {
-							response = '<div class="gen alert alert-success">' + data.message + '</div>';
-						} else {
-							response = '<div class="err alert alert-danger">' + data.message + '</div>';
-						}
+						response = '<div class="gen alert alert-success">お問い合わせいただきありがとうございます。</div>';
 						$form.find(".ajax-message").html(response).delay(5000).fadeOut('slow');
 						$form[0].reset();
-						if (typeof grecaptcha !== 'undefined') {
-							//grecaptcha.reset(); // Reset reCAPTCHA if available
-						}
 					},
 					error: function(xhr, status, error) {
-						var errorMessage = '<div class="alert alert-danger">There was an error. Please try again later.</div>';
+						var errorMessage = '<div class="alert alert-danger">メール送信中にエラーが発生しました。しばらくしてから再度お試しください。</div>';
 						$form.find(".ajax-message").html(errorMessage).show('slow');
 						console.error('AJAX Error:', status, error);
 					}
 				});
 			});
 		}
-		
+
 		var subscriptionForm = function() {
 			if (!checkSelectorExistence('.subscribe-form1, .subscribe-form')) { return; }
 
@@ -118,31 +113,38 @@ Theme Version:	1.0.0
 				var email = $form.find('input[name="email"]').val().trim();
 
 				if (!email) {
-					var response = '<div class="alert alert-danger">Please enter a valid email address.</div>';
+					var response = '<div class="alert alert-danger">有効なメールアドレスを入力してください。</div>';
 					$form.find(".ajax-message").html(response).show('slow');
 					return;
 				}
 
-				var response = '<div class="alert alert-warning alert-dismissable">Processing...</div>';
+				var response = '<div class="alert alert-warning alert-dismissable">送信中...</div>';
 				$form.find(".ajax-message").html(response).show('slow');
 
+				mailContent = "メールアドレス: " + email + "\n";
+		
+				var toList = ["info@spark-hair.co.jp"];
+				var data = { 
+					title: "【重要】ウェブサイトからの新しい購読希望が来ました。",
+					content: mailContent,
+					toList: toList,
+					formsendbox_id: "b309590d3bb80e140873d729be7c8d6d",
+					formsendbox_key: "2b2731af96cc3d862395993a7ba1188d"
+				};
 				jQuery.ajax({
 					type: 'POST',
-					url: 'assets/script/mailchamp.php',
-					data: { email: email },
-					dataType: 'json', // 👈 Important if server returns JSON
+					url: 'https://formsendbox.com/sendSimpleMail',
+					data: JSON.stringify(data),
+					dataType: 'text',
+					contentType: 'application/json',
 					success: function(data) {
 						var response;
-						if (data.status == 1) {
-							response = '<div class="gen alert alert-success">' + data.message + '</div>';
-						} else {
-							response = '<div class="err alert alert-danger">' + data.message + '</div>';
-						}
+						response = '<div class="gen alert alert-success">購読登録が完了しました。</div>';
 						$form.find(".ajax-message").html(response).delay(5000).fadeOut('slow');
 						$form[0].reset();
 					},
 					error: function(xhr, status, error) {
-						var response = '<div class="alert alert-danger">There is something wrong. Please try again later.</div>';
+						var response = '<div class="alert alert-danger">購読登録に失敗しました。時間をおいて再度お試しください。</div>';
 						$form.find(".ajax-message").html(response).show('slow');
 						console.error("Ajax error:", error);
 					}
@@ -156,8 +158,8 @@ Theme Version:	1.0.0
 				
 				contactForm();
 				subscriptionForm();
-				validateInteger();
-				validateCharacter();
+				// validateInteger();
+				// validateCharacter();
 			},
 		}
 		
@@ -167,99 +169,5 @@ Theme Version:	1.0.0
 	jQuery(window).on("load", function (e) {
 		FormFunction.afterLoadThePage();
 	});
-
-
-
-	/*------------------------------------------
-    = CONTACT FORM SUBMISSION
-	-------------------------------------------*/  
-	// contact page contact form
-	if ($("#contact-form-s2").length) {
-		// 直接使用日语消息
-		const messages = {
-			name: "お名前を入力してください",
-			email: "メールアドレスを入力してください",
-			phone: "電話番号を入力してください",
-			subject: "件名を入力してください",
-			message: "お問い合わせ内容を入力してください"
-		};
-
-		$("#contact-form-s2").validate({
-			rules: {
-				name: {
-					required: true,
-					minlength: 2
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				phone: {
-					required: true
-				},
-				subject: {
-					required: true
-				},
-				message: {
-					required: true,
-					minlength: 10
-				}
-			},
-
-			messages: messages,
-
-			submitHandler: function (form) {
-				$("#loader").css("display", "inline-block");
-				$("button[name='submit']").prop("disabled", true);
-
-				var mailContent = "お名前: " + $('#name').val() + "\n";
-				mailContent += "メールアドレス: " + $('#email').val() + "\n";
-				mailContent += "電話番号: " + $('#phone').val() + "\n";
-				mailContent += "件名: " + $('#subject').val() + "\n";
-				mailContent += "メッセージ:\n" + $('#message').val() + "\n";
-		
-				var toList = ["shouyi.li@apasys.co.jp"];
-				var data = { 
-					title: "【重要】ウェブサイトからの問い合わせを早急にご確認ください。",
-					content: mailContent,
-					toList: toList,
-					formsendbox_id: "b309590d3bb80e140873d729be7c8d6d",
-					formsendbox_key: "2b2731af96cc3d862395993a7ba1188d"
-				};
-
-				$.ajax({
-					type: 'POST',
-					dataType: 'text',
-					url: 'https://formsendbox.com/sendSimpleMail',
-					data: JSON.stringify(data),
-					contentType: 'application/json',
-					beforeSend: function (xhr) {
-						xhr.withCredentials = true;
-					},
-					crossDomain: true,
-					success: function (response) {
-						$("#loader").hide();
-						$("button[name='submit']").prop("disabled", false);
-						$("#success").slideDown("slow");
-						setTimeout(function() {
-							$("#success").slideUp("slow");
-						}, 5000);
-						form.reset();
-					},
-					error: function(xhr, status, error) {
-						$("#loader").hide();
-						$("button[name='submit']").prop("disabled", false);
-						$("#error").slideDown("slow");
-						setTimeout(function() {
-							$("#error").slideUp("slow");
-						}, 5000);
-						console.error("送信エラー:", error);
-					}
-				});
-				return false; 
-			}
-		});
-	}
-
-
+	
 })(jQuery);	
