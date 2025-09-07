@@ -48,8 +48,8 @@
 */
 /* Google Fonts */
 /* Google Fonts（和文対応） */
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&display=swap");
 
 /* （必要なら既存英字用フォントは残してOKだが、和文優先に並べ替え） */
 /* @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"); */
@@ -70,7 +70,7 @@
 @import "./../libs/lucide/lucide.css";
 :root {
   --custom-shadow: 0 2px 4px 0 rgba(225, 229, 237, 0.2);
-  --bs-headings-font-family: 'Noto Serif JP', serif;
+  --bs-headings-font-family: "Noto Sans JP", sans-serif;
 }
 
 body[data-bs-theme=dark] {
@@ -158,10 +158,10 @@ body[data-bs-theme=dark] {
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: "Noto Serif JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "YuGothic", "Meiryo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "YuGothic", "Meiryo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: 'Noto Serif JP', serif;
+  --bs-body-font-family: "Noto Sans JP", sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.6;
@@ -304,7 +304,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   line-height: 1.25;
   color: var(--bs-heading-color);
@@ -5932,7 +5932,7 @@ textarea.form-control-lg {
   z-index: var(--bs-tooltip-zindex);
   display: block;
   margin: var(--bs-tooltip-margin);
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6042,7 +6042,7 @@ textarea.form-control-lg {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -12323,73 +12323,6 @@ textarea.form-control-lg {
   --bs-btn-hover-bg: #d0d3d5;
 }
 
-
-[data-ld-theme=orangy-red] {
-  /* 本文と見出しを黒に */
-  --bs-body-color: #000000;
-  --bs-body-color-rgb: 0, 0, 0;
-  --bs-heading-color: #000000;
-  --bs-heading-color-rgb: 0, 0, 0;
-
-  /* リンクはブランド赤を維持 */
-  --bs-link-color: #000000;
-  --bs-link-color-rgb: 0, 0, 0;
-  --bs-link-hover-color: #000000;
-  --bs-link-hover-color-rgb: 0, 0, 0;
-
-  /* プライマリー（ボタンや強調色）は赤系を維持 */
-  --bs-primary: #3b3a3a;
-  --bs-primary-rgb: 59, 58, 58;
-
-  /* サブカラーは黒寄りに */
-  --bs-secondary: #333333;
-  --bs-secondary-rgb: 51, 51, 51;
-
-  /* 背景色を白メインに */
-  --bs-light: #ffffff;
-  --bs-light-rgb: 255, 255, 255;
-
-  /* ダーク色は黒 */
-  /* --bs-dark: #3b3a3a; */
-  --bs-dark: #000000;
-
-  /* セクション用の薄グレー背景 */
-  --bs-gray-rgb: 245, 245, 245;
-
-  /* テキスト強調 */
-  --bs-primary-text-emphasis: #3b3a3a;
-  --bs-secondary-text-emphasis: #333333;
-  --bs-dark-text-emphasis: #000000;
-  --bs-light-text-emphasis: #666666;
-
-  /* subtle 背景（区切りやブロック） */
-  --bs-primary-bg-subtle: #F0F2F2;
-  --bs-secondary-bg-subtle: #F0F2F2;
-  --bs-dark-bg-subtle: #F0F2F2;
-  --bs-light-bg-subtle: #F0F2F2;
-
-  /* ボーダーをシンプルなグレーに */
-  --bs-primary-border-subtle: #dddddd;
-  --bs-secondary-border-subtle: #e0e0e0;
-  --bs-dark-border-subtle: #cccccc;
-  --bs-light-border-subtle: #eeeeee;
-}
-
-/* ボタンのホバーも調整 */
-[data-ld-theme=orangy-red] .btn-primary {
-  --bs-btn-hover-bg: #3b3a3a;
-}
-[data-ld-theme=orangy-red] .btn-secondary {
-  --bs-btn-hover-bg: #222222;
-}
-[data-ld-theme=orangy-red] .btn-dark {
-  --bs-btn-hover-bg: #222222;
-}
-[data-ld-theme=orangy-red] .btn-light {
-  --bs-btn-hover-bg: #e0e0e0;
-}
-
-/* 
 [data-ld-theme=orangy-red] {
   --bs-body-color: #5a564d;
   --bs-body-color-rgb: 90, 86, 77;
@@ -12431,7 +12364,7 @@ textarea.form-control-lg {
 }
 [data-ld-theme=orangy-red] .btn-light {
   --bs-btn-hover-bg: #d9d3c9;
-} */
+}
 
 [data-ld-theme=royal-indigo] {
   --bs-body-color: #555555;
@@ -12978,9 +12911,9 @@ dl dd {
 }
 
 .top-bar {
-  /* background-color: var(--bs-primary-bg-subtle); */
+  background-color: var(--bs-primary);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  color: var(--bs-dark);
+  color: #fff;
   padding: 11px 0;
 }
 .top-bar .top-inner {
@@ -13014,7 +12947,7 @@ dl dd {
 
 .topbar-left ul li a,
 .topbar-right ul li a {
-  color: var(--bs-dark);
+  color: #fff;
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -13041,7 +12974,7 @@ dl dd {
 .topbar-left ul li i {
   margin-right: 5px;
   font-size: 18px;
-  color: var(--bs-dark);
+  color: #fff;
 }
 
 .topbar-left ul li:after,
@@ -13464,7 +13397,7 @@ dl dd {
 .menu-links .nav > li.menu-item-has-children:before {
   content: "\f078";
   display: block;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   right: 4px;
   position: absolute;
   top: 50%;
@@ -14213,7 +14146,7 @@ dl dd {
   align-items: center;
   font-size: 14px;
   color: #fff;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 1px;
@@ -14235,7 +14168,7 @@ dl dd {
   background-color: transparent;
   color: #999999;
   font-size: 18px;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   display: inline-block;
@@ -14339,7 +14272,7 @@ dl dd {
   padding: 10px 0;
 }
 .header-v3 .header-classic .navbar-nav li a {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 80px;
   font-weight: 400;
   line-height: 1;
@@ -18929,7 +18862,7 @@ footer .widget_services ul li:hover {
   font-weight: 600;
   font-size: 16px;
   display: block;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   margin-bottom: 7px;
 }
 @media (max-width: 767.98px) {
@@ -19163,7 +19096,7 @@ footer .widget_services ul li:hover {
 }
 .heading-bx.style5 .title-ext {
   font-size: 24px;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
   line-height: 1.2;
@@ -20880,7 +20813,7 @@ blockquote p {
   line-height: 40px;
   margin-bottom: 0px;
   font-weight: 600;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 @media only screen and (max-width: 767px) {
   blockquote {
@@ -22490,7 +22423,7 @@ button.back-to-top {
   line-height: 1.4;
 }
 .client-feedback-five .feedback-info {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   font-size: 16px;
   margin-top: 25px;
@@ -24144,7 +24077,7 @@ button.back-to-top {
   border-width: 0 0 1px 0;
 }
 .pricingtable-wrapper .pricingtable-bx {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   color: var(--bs-dark);
   font-size: 60px;
   font-weight: 700;
@@ -24223,7 +24156,7 @@ button.back-to-top {
   position: relative;
   top: 10px;
   color: var(--bs-dark);
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .pricingtable-wrapper .pricingtable-highlight.pricingtable-inner {
   background: var(--bs-primary);
@@ -24640,7 +24573,7 @@ button.back-to-top {
 }
 .pricingtable-wrapper6 .pricing-list ul li a::after {
   content: "\e494";
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   position: absolute;
   right: 20px;
   font-size: 24px;
@@ -25734,7 +25667,7 @@ button.back-to-top {
 .list-pen li:before,
 .list-heart li:before,
 .list-star li:before {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   position: absolute;
   left: 0;
   top: 5px;
@@ -25755,7 +25688,7 @@ button.back-to-top {
 .right.list-pen li:before,
 .right.list-heart li:before,
 .right.list-star li:before {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   position: absolute;
   left: auto;
   right: 0;
@@ -25793,7 +25726,7 @@ ul[class*=list-] {
 
 .list-checked li:before {
   content: "\e64d";
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 15px;
 }
 
@@ -26823,7 +26756,7 @@ ul[class*=list-].fs16 {
   z-index: 1;
 }
 .timeline-date h6, .timeline-date .h6 {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   color: var(--bs-primary);
   letter-spacing: 1px;
@@ -29166,7 +29099,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 
 .hero-slider1 {
   height: 850px;
-  background-color: var(--bs-primary-bg-subtle);
+  background-color: #E2D3C4;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -29174,13 +29107,13 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   width: 100%;
 }
 .hero-slider1 .swiper-slide {
-  background-color: var(--bs-primary-bg-subtle);
+  background-color: #E2D3C4;
 }
 .hero-slider1 .parallax-text {
   position: absolute;
   left: -20px;
   bottom: 0;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 800;
   font-size: 310px;
   line-height: 220px;
@@ -29204,12 +29137,10 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   line-height: 1.15;
   font-weight: 500;
   margin-bottom: 10px;
-  margin-right: 80px;
 }
 .hero-slider1 p {
   font-size: 24px;
   font-weight: 300;
-  margin-right: 100px;
 }
 .hero-slider1 .btn-content {
   margin-top: 50px;
@@ -29223,12 +29154,10 @@ ol.comment-list li.comment .comment-respond .comment-form p {
     height: 620px;
   }
   .hero-slider1 h1, .hero-slider1 .h1 {
-    margin-right: 80px;
     font-size: 82px;
   }
   .hero-slider1 p {
     font-size: 20px;
-    margin-right: 100px;
   }
   .hero-slider1 .btn-content {
     margin-top: 30px;
@@ -30250,7 +30179,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   margin-bottom: 30px;
 }
 .hero-slider4 .title span {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: italic;
 }
 .hero-slider4 .hero-content {
@@ -31950,7 +31879,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 
 .btn-salon {
   font-size: 14px;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
 }
 .btn-salon.btn-primary {
@@ -31995,7 +31924,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 }
 .hero-slider8 .title-ext {
   font-size: 24px;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   text-transform: capitalize;
   line-height: 1.2;
@@ -32361,7 +32290,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   gap: 20px;
 }
 .offer-wrap-box .offer-wrap .offer {
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-style: italic;
   font-weight: 600;
   font-size: 24px;
@@ -32614,7 +32543,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   display: block;
   color: #fff;
   line-height: 1.2;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .comign-soon .comign-soon-area .title {
   font-size: 65px;
@@ -32902,7 +32831,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   line-height: 30px;
   font-weight: 400;
   margin-bottom: 30px;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 .error-page p {
   font-size: 16px;
@@ -33253,7 +33182,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 }
 .service-list.style-2 li a::after {
   content: "\f30b";
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   width: auto;
   height: auto;
   background: transparent;
@@ -34453,7 +34382,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 .meta-item .title,
 .product-quantity .title {
   color: #5a564d;
-  font-family: 'Noto Serif JP', serif;
+  font-family: "Noto Sans JP", sans-serif;
   margin-bottom: 0;
   width: 120px;
   font-size: 15px;
