@@ -12333,9 +12333,9 @@ textarea.form-control-lg {
 
   /* リンクはブランド赤を維持 */
   --bs-link-color: #000000;
-  --bs-link-color-rgb: 182, 85, 79;
+  --bs-link-color-rgb: 0, 0, 0;
   --bs-link-hover-color: #000000;
-  --bs-link-hover-color-rgb: 155, 72, 67;
+  --bs-link-hover-color-rgb: 0, 0, 0;
 
   /* プライマリー（ボタンや強調色）は赤系を維持 */
   --bs-primary: #3b3a3a;
@@ -12357,7 +12357,7 @@ textarea.form-control-lg {
   --bs-gray-rgb: 245, 245, 245;
 
   /* テキスト強調 */
-  --bs-primary-text-emphasis: #b6554f;
+  --bs-primary-text-emphasis: #3b3a3a;
   --bs-secondary-text-emphasis: #333333;
   --bs-dark-text-emphasis: #000000;
   --bs-light-text-emphasis: #666666;
@@ -29204,10 +29204,12 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   line-height: 1.15;
   font-weight: 500;
   margin-bottom: 10px;
+  margin-right: 80px;
 }
 .hero-slider1 p {
   font-size: 24px;
   font-weight: 300;
+  margin-right: 100px;
 }
 .hero-slider1 .btn-content {
   margin-top: 50px;
@@ -29221,10 +29223,12 @@ ol.comment-list li.comment .comment-respond .comment-form p {
     height: 620px;
   }
   .hero-slider1 h1, .hero-slider1 .h1 {
+    margin-right: 80px;
     font-size: 82px;
   }
   .hero-slider1 p {
     font-size: 20px;
+    margin-right: 100px;
   }
   .hero-slider1 .btn-content {
     margin-top: 30px;
