@@ -15428,7 +15428,7 @@ footer .widget_services ul li:hover {
 }
 
 .footer-style1 {
-  background-image: url(../images/banner/banner5.jpg);
+  /* background-image: url(../images/banner/banner5.jpg); */
   background-blend-mode: saturation;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -25270,7 +25270,7 @@ button.back-to-top {
 
 .ld-separator.sepimg,
 .ld-separator.sepimg2 {
-  background-image: url(../images/separator.png);
+  /* background-image: url(../images/separator.png); */
   height: 13px;
   background-repeat: no-repeat;
   background-position: center;
@@ -25278,7 +25278,7 @@ button.back-to-top {
 }
 
 .ld-separator.sepimg2 {
-  background-image: url(../images/separator-black.png);
+  /* background-image: url(../images/separator-black.png); */
 }
 
 .ld-separator.style-liner {
