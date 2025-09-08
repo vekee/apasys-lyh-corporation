@@ -29200,7 +29200,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   max-width: max-content;
 }
 .hero-slider1 h1, .hero-slider1 .h1 {
-  font-size: 100px;
+  font-size: 50px;
   line-height: 1.15;
   font-weight: 500;
   margin-bottom: 10px;
@@ -29209,7 +29209,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 .hero-slider1 p {
   font-size: 24px;
   font-weight: 300;
-  margin-right: 100px;
+  margin-right: 120px;
 }
 .hero-slider1 .btn-content {
   margin-top: 50px;
@@ -29224,11 +29224,11 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   }
   .hero-slider1 h1, .hero-slider1 .h1 {
     margin-right: 80px;
-    font-size: 82px;
+    font-size: 40px;
   }
   .hero-slider1 p {
     font-size: 20px;
-    margin-right: 100px;
+    margin-right: 120px;
   }
   .hero-slider1 .btn-content {
     margin-top: 30px;
@@ -29247,7 +29247,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
     height: 520px;
   }
   .hero-slider1 h1, .hero-slider1 .h1 {
-    font-size: 72px;
+    font-size: 40px;
   }
   .hero-slider1 p {
     font-size: 18px;
